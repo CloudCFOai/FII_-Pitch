@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
+<html lang="fr"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>CloudCFO.ai — Pitch Deck StartUp Maroc 2030</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
 <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
@@ -343,40 +341,86 @@ h1,h2,h3,.font-heading{font-family:'Georgia',serif}
 .error.hidden{display:none}
 
 @media(max-width:1024px){.slide{width:calc(100vw - 32px);max-width:none}.slide-inner{padding:24px 28px}.sec-grid{grid-template-columns:repeat(2,1fr)}.team-grid{grid-template-columns:repeat(2,1fr)}.reasons-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* === POC SLIDES — GRAFANA-STYLE === */
+.grafana-panel{background:#181B1F;border:1px solid #2A2D33;border-radius:12px;padding:14px;color:white}
+.grafana-panel h4{font-family:'Inter',sans-serif;font-size:11px;font-weight:600;color:rgba(255,255,255,.65);text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px}
+.grafana-big{font-family:'Georgia',serif;font-size:52px;font-weight:700;color:#22C55E;line-height:1;letter-spacing:-0.03em}
+.grafana-big-sub{font-size:11px;color:rgba(255,255,255,.45);margin-top:4px}
+.grafana-table{width:100%;font-size:10px;border-collapse:collapse}
+.grafana-table th{text-align:left;color:rgba(255,255,255,.5);font-weight:600;padding:4px 6px;border-bottom:1px solid #2A2D33;font-size:9px;text-transform:uppercase}
+.grafana-table td{padding:4px 6px;border-bottom:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.85)}
+.grafana-table td.acc{font-weight:700;text-align:right}
+.acc-high{color:#22C55E}
+.acc-perfect{color:#4ADE80}
+.grafana-check{display:inline-block;width:14px;height:14px;background:#22C55E;border-radius:3px;text-align:center;line-height:14px;font-size:9px;color:#0F172A;font-weight:700}
+.pipeline-flow{display:flex;align-items:center;gap:0;margin:14px 0}
+.pipeline-node{background:#181B1F;border:1px solid #2A2D33;border-radius:10px;padding:10px 12px;text-align:center;flex:1;position:relative}
+.pipeline-node .pn-icon{font-size:20px;display:block;margin-bottom:4px}
+.pipeline-node .pn-title{font-size:10px;font-weight:700;color:white;margin-bottom:2px}
+.pipeline-node .pn-sub{font-size:8px;color:rgba(255,255,255,.45)}
+.pipeline-node.active{border-color:var(--brand-500);box-shadow:0 0 12px rgba(34,197,94,.15)}
+.pipeline-arrow{color:var(--brand-500);font-size:16px;font-weight:bold;flex-shrink:0;padding:0 2px}
+.monitoring-bar{display:flex;gap:8px;margin-top:10px}
+.mon-channel{background:#1E1E24;border:1px solid #2A2D33;border-radius:8px;padding:6px 10px;font-size:9px;display:flex;align-items:center;gap:6px;flex:1}
+.mon-channel .mon-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+.mon-dot.green{background:#22C55E}
+.mon-dot.orange{background:#F59E0B}
+.mon-dot.red{background:#EF4444}
+.mon-channel .mon-name{color:rgba(255,255,255,.75);font-weight:600}
+.mon-channel .mon-type{color:rgba(255,255,255,.35);font-size:8px}
+.doc-type-pills{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}
+.doc-pill{background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.2);border-radius:20px;padding:3px 10px;font-size:9px;font-weight:600;color:var(--brand-400)}
+.doc-pill.active{background:rgba(34,197,94,.2);border-color:var(--brand-500);color:var(--brand-300)}
+.section-score{display:flex;gap:8px;margin-top:8px}
+.sec-item{flex:1;background:#1E1E24;border-radius:8px;padding:8px;text-align:center}
+.sec-item .sec-val{font-family:'Georgia',serif;font-size:20px;font-weight:700;color:#4ADE80;display:block}
+.sec-item .sec-label{font-size:8px;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.3px}
+.field-grid{display:flex;flex-wrap:wrap;gap:4px;margin-top:8px}
+.field-tag{background:#1E1E24;border-radius:6px;padding:3px 8px;font-size:9px;display:flex;align-items:center;gap:4px}
+.field-tag span:first-child{color:rgba(255,255,255,.7)}
+.dark-slide-alt{background:linear-gradient(135deg,#0C1220 0%,#111827 100%);color:white;border:1px solid rgba(255,255,255,.04)}
+.slide-title-grafana{font-size:26px;color:#22C55E;margin-bottom:4px;font-weight:700;letter-spacing:-0.02em}
+.slide-subtitle-grafana{font-size:12px;color:rgba(255,255,255,.45);font-style:italic;margin-bottom:14px}
+.stack-label{display:inline-block;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:6px;padding:2px 8px;font-size:9px;font-weight:600;color:rgba(255,255,255,.5);font-family:'Courier New',monospace}
+.run-bar{display:flex;gap:4px;margin:6px 0;align-items:flex-end}
+.run-col{flex:1;border-radius:4px 4px 0 0;min-height:8px;position:relative}
+.run-col .run-val{position:absolute;top:-14px;left:50%;transform:translateX(-50%);font-size:8px;color:rgba(255,255,255,.6);white-space:nowrap}
+
 </style>
 </head>
-<body>
+<body class="">
 
 <!-- TOOLBAR -->
 <div class="toolbar">
-  <span class="logo"><span class="logo-icon"><svg viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></span>CloudCFO</span>
+  <span class="logo"><span class="logo-icon"><svg viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg></span>CloudCFO</span>
   <span class="sep"></span>
-  <span id="conn-status" class="status">🟡 Connexion...</span>
+  <span id="conn-status" class="status">🟢 Connecté</span>
   <span class="sep"></span>
   <span id="mode-badge" class="mode mode-read">🔒 Lecture</span>
-  <span id="user-count" class="status">1 👥</span>
-  <span class="status" style="font-size:11px">🕐 <span id="sync-time">--:--</span></span>
+  <span id="user-count" class="status">2 👥</span>
+  <span class="status" style="font-size:11px">🕐 <span id="sync-time">21:19</span></span>
   <span class="spacer"></span>
   <button id="toggle-edit-btn" onclick="promptPassword()">🔓 Déverrouiller</button>
   <button onclick="downloadPDF()">📥 PDF</button>
   <button onclick="downloadHTML()">📄 HTML</button>
-  <button id="restore-btn" onclick="restoreOriginal()" style="display:none">🔄 Restaurer</button>
+  <button id="restore-btn" onclick="restoreOriginal()" style="display: none;">🔄 Restaurer</button>
 </div>
 
 <!-- SLIDES -->
 <div class="slides-wrapper">
 
-    <div class="slide dark-slide active" data-slide="1">
+    <div class="slide dark-slide" data-slide="1" style="">
       <div class="slide-inner">
         <div class="accent-bar brand"></div>
         <div class="cover-layout">
           <div class="cover-left">
-            <h1 class="cover-title" data-field="s1_title">CloudCFO.ai</h1>
-            <p class="cover-subtitle" data-field="s1_subtitle">L'Intelligence Financière Autonome</p>
-            <p class="cover-desc" data-field="s1_desc">Comptabilité & Carbon Passport propulsés par l'IA</p>
-            <div class="cover-badge"><span data-field="s1_badge">Candidature StartUp Maroc 2030 — 2ème Édition</span></div>
-            <p class="cover-meta" data-field="s1_meta">Powered by MerlinData.ai • Mars 2026</p>
-            <p class="cover-entity" data-field="s1_entity">Merlin Technologies (Maroc) SARL</p>
+            <h1 class="cover-title" data-field="s1_title" contenteditable="false">CloudCFO.ai</h1>
+            <p class="cover-subtitle" data-field="s1_subtitle" contenteditable="false">L'Intelligence Financière Autonome</p>
+            <p class="cover-desc" data-field="s1_desc" contenteditable="false">Comptabilité &amp; Carbon Passport propulsés par l'IA</p>
+            <div class="cover-badge"><span data-field="s1_badge" contenteditable="false">Candidature StartUp Maroc 2030 — 2ème Édition</span></div>
+            <p class="cover-meta" data-field="s1_meta" contenteditable="false">Powered by MerlinData.ai • Mars 2026</p>
+            <p class="cover-entity" data-field="s1_entity" contenteditable="false">Merlin Technologies (Maroc) Sarl</p>
           </div>
           <div class="cover-right">
             <div class="icon-cluster">
@@ -386,232 +430,409 @@ h1,h2,h3,.font-heading{font-family:'Georgia',serif}
           </div>
         </div>
       </div>
-      <div class="slide-footer dark">1/22</div>
+      <div class="slide-footer dark">1/23</div>
     </div>
-    <div class="slide light-slide" data-slide="2">
+    <div class="slide light-slide" data-slide="2" style="">
       <div class="slide-inner">
         <div class="accent-bar brand-dark"></div>
-        <h2 class="slide-title" data-field="s2_title">Le Problème Urgent : Triple Crise</h2>
-        <p class="slide-subtitle" data-field="s2_subtitle">Trois défis convergents qui créent une opportunité sans précédent</p>
+        <h2 class="slide-title" data-field="s2_title" contenteditable="false">Le Problème Urgent : Triple Défi</h2>
+        <p class="slide-subtitle" data-field="s2_subtitle" contenteditable="false">Trois défis convergents qui créent une opportunité sans précédent</p>
         <div class="cards-3">
           <div class="card"><div class="card-accent brand-dark"></div>
             <div class="card-icon">📋</div>
-            <h3 data-field="s2_c1_title">Crise Comptable</h3>
-            <ul><li data-field="s2_c1_l1">8h/semaine perdues en saisie</li><li data-field="s2_c1_l2">< 66% de précision OCR</li><li data-field="s2_c1_l3">Désert de solutions pour PME</li></ul>
+            <h3 data-field="s2_c1_title" contenteditable="false">Le Défi Comptable</h3>
+            <ul><li data-field="s2_c1_l1" contenteditable="false">&nbsp; &nbsp; 8h/semaine perdues en saisie</li><li data-field="s2_c1_l2" contenteditable="false">&nbsp; &nbsp;&lt; 66% de précision OCR</li><li data-field="s2_c1_l3" contenteditable="false">&nbsp; &nbsp;Absence de solutions pour PME</li></ul>
           </div>
           <div class="card"><div class="card-accent brand"></div>
             <div class="card-icon">📜</div>
-            <h3 data-field="s2_c2_title">Facturation Digitale 2026</h3>
-            <ul><li data-field="s2_c2_l1">Obligation légale au Maroc</li><li data-field="s2_c2_l2">Traçabilité fiscale renforcée</li><li data-field="s2_c2_l3">Marché captif pour CloudCFO</li></ul>
+            <h3 data-field="s2_c2_title" contenteditable="false">Facturation Digitale 2026</h3>
+            <ul><li data-field="s2_c2_l1" contenteditable="false">&nbsp; Obligation légale récente, au Maroc</li><li data-field="s2_c2_l2" contenteditable="false">&nbsp; Reflête une volonté de Digitalisation de l'Economie</li><li data-field="s2_c2_l3" contenteditable="false">&nbsp; Marché captif pour CloudCFO</li></ul>
           </div>
           <div class="card"><div class="card-accent accent-gold"></div>
             <div class="card-icon">🌿</div>
-            <h3 data-field="s2_c3_title">Carbon Passport 2027</h3>
-            <ul><li data-field="s2_c3_l1">CBAM en vigueur depuis 01/2026</li><li data-field="s2_c3_l2">70–95 €/tCO₂ pour non-conformes</li><li data-field="s2_c3_l3">65% des exports marocains → UE</li></ul>
+            <h3 data-field="s2_c3_title" contenteditable="false">Accès marché EU "sous condition" dès 2027</h3>
+            <ul><li data-field="s2_c3_l1" contenteditable="false">&nbsp; Obligation d'un Passeport Carbone par produit entrant</li><li data-field="s2_c3_l2" contenteditable="false">&nbsp; 70–95 €/tCO₂ pour non-conformes</li><li data-field="s2_c3_l3" contenteditable="false">&nbsp; 65% des exports marocains → UE</li></ul>
           </div>
         </div>
-        <div class="metrics-bar brand-dark-bg" data-field="s2_metrics">8h/sem perdues · < 66% OCR · 70–95 €/tCO₂ · 65% exports → UE · 2026 : facturation digitale</div>
+        <div class="metrics-bar brand-dark-bg" data-field="s2_metrics" contenteditable="false">8h/sem perdues · &lt; 66% OCR · 70–95 €/tCO₂ · 65% exports → UE · 2026 : facturation digitale</div>
       </div>
-      <div class="slide-footer">2/22</div>
+      <div class="slide-footer">2/23</div>
     </div>
-    <div class="slide light-slide" data-slide="3">
+    <div class="slide light-slide" data-slide="3" style="">
       <div class="slide-inner">
         <div class="accent-bar brand"></div>
-        <h2 class="slide-title" data-field="s3_title">L'Enjeu National</h2>
-        <p class="slide-subtitle" data-field="s3_subtitle">CloudCFO s'inscrit au cœur de la stratégie Maroc Digital 2030</p>
+        <h2 class="slide-title" data-field="s3_title" contenteditable="false">L'Enjeu National</h2>
+        <p class="slide-subtitle" data-field="s3_subtitle" contenteditable="false">CloudCFO s'inscrit au cœur des stratégies de développement marocaines</p>
         <div class="two-col">
           <div class="col-left">
-            <div class="check-item"><span class="check">✓</span><div><strong data-field="s3_p1_title">Maroc Digital 2030</strong><br><span data-field="s3_p1_desc">3 000 startups, Gazelles et licornes, 240 000 emplois numériques</span></div></div>
-            <div class="check-item"><span class="check">✓</span><div><strong data-field="s3_p2_title">Facturation Digitale 2026</strong><br><span data-field="s3_p2_desc">Obligation légale, traçabilité fiscale, marché captif pour l'automatisation</span></div></div>
-            <div class="check-item"><span class="check">✓</span><div><strong data-field="s3_p3_title">Carbon Passport 2027</strong><br><span data-field="s3_p3_desc">CBAM en vigueur, 65% des exports → UE, PME sans outils ni compétences</span></div></div>
-            <div class="check-item"><span class="check">✓</span><div><strong data-field="s3_p4_title">Coupe du Monde 2030</strong><br><span data-field="s3_p4_desc">Afflux d'activité économique, conformité et traçabilité pour l'écosystème</span></div></div>
+            <div class="check-item"><span class="check">✓</span><div><strong data-field="s3_p1_title" contenteditable="false">Maroc Digital 2030</strong><br><span data-field="s3_p1_desc" contenteditable="false">3 000 startups, Gazelles et licornes, 240 000 emplois numériques</span></div></div>
+            <div class="check-item"><span class="check">✓</span><div><strong data-field="s3_p2_title" contenteditable="false">Facturation Digitale 2026</strong><br><span data-field="s3_p2_desc" contenteditable="false">Obligation légale, traçabilité fiscale, marché captif pour l'automatisation</span></div></div>
+            <div class="check-item"><span class="check">✓</span><div><strong data-field="s3_p3_title" contenteditable="false">Carbon Passport 2027</strong><br><span data-field="s3_p3_desc" contenteditable="false">Obligatoire dès 2027, 65% des exports → UE, PME sans outils ni compétences</span></div></div>
+            <div class="check-item"><span class="check">✓</span><div><strong data-field="s3_p4_title" contenteditable="false">Coupe du Monde 2030</strong><br><span data-field="s3_p4_desc" contenteditable="false">Afflux d'activité économique, conformité et traçabilité pour l'écosystème</span></div></div>
           </div>
           <div class="col-right">
             <div class="callout-box brand-border">
               <div class="callout-flag">🇲🇦</div>
-              <h3 data-field="s3_callout_title">Quasiment une Mission de Service Public</h3>
-              <p data-field="s3_callout_text">CloudCFO est la brique technologique manquante pour transformer chaque PME marocaine en entreprise financièrement intelligente et écologiquement responsable.</p>
+              <h3 data-field="s3_callout_title" contenteditable="false">Quasiment une Mission de Service Public</h3>
+              <p data-field="s3_callout_text" contenteditable="false">CloudCFO est la brique technologique manquante pour transformer chaque PME marocaine en entreprise financièrement intelligente, exportatrice et écologiquement consciente.</p>
             </div>
           </div>
         </div>
-        <div class="quote-bar" data-field="s3_quote">« La brique technologique manquante pour que le Maroc Digital 2030 devienne réalité »</div>
+        <div class="quote-bar" data-field="s3_quote" contenteditable="false">« La brique technologique manquante pour que le Maroc Digital 2030 devienne réalité »</div>
       </div>
-      <div class="slide-footer">3/22</div>
+      <div class="slide-footer">3/23</div>
     </div>
-    <div class="slide light-slide" data-slide="4">
+    <div class="slide light-slide" data-slide="4" style="">
       <div class="slide-inner">
         <div class="accent-bar brand-dark"></div>
-        <h2 class="slide-title" data-field="s4_title">Notre Solution : 4 Piliers d'Intelligence</h2>
-        <p class="slide-subtitle" data-field="s4_subtitle">De la détection automatique à l'intelligence financière et carbone</p>
+        <h2 class="slide-title" data-field="s4_title" contenteditable="false">Notre Solution : 4 Piliers d'Intelligence</h2>
+        <p class="slide-subtitle" data-field="s4_subtitle" contenteditable="false">De la détection automatique à l'intelligence financière et carbone</p>
         <div class="pillars-4">
-          <div class="pillar"><div class="pillar-num brand-dark-bg">1</div><h3 data-field="s4_p1_title">AutoDiscovery</h3><p data-field="s4_p1_desc">Détection automatique via Gmail, Drive, Outlook, WhatsApp</p></div>
+          <div class="pillar"><div class="pillar-num brand-dark-bg">1</div><h3 data-field="s4_p1_title" contenteditable="false">AutoDiscovery</h3><p data-field="s4_p1_desc" contenteditable="false">Détection automatique via:<br>Gmail, Drive, Outlook, WhatsApp</p></div>
           <div class="pillar-arrow">→</div>
-          <div class="pillar"><div class="pillar-num brand-dark-bg">2</div><h3 data-field="s4_p2_title">Extraction IA + HITL</h3><p data-field="s4_p2_desc">IBM Docling + LangChain RAG · 99,5% précision</p></div>
+          <div class="pillar"><div class="pillar-num brand-dark-bg">2</div><h3 data-field="s4_p2_title" contenteditable="false">Extraction IA + HITL</h3><p data-field="s4_p2_desc" contenteditable="false">IBM Docling + LangChain RAG · 99,5% précision</p></div>
           <div class="pillar-arrow">→</div>
-          <div class="pillar"><div class="pillar-num brand-bg">3</div><h3 data-field="s4_p3_title">Output Vérifié</h3><p data-field="s4_p3_desc">Écritures comptables automatiques + Carbon Passport</p></div>
+          <div class="pillar"><div class="pillar-num brand-bg">3</div><h3 data-field="s4_p3_title" contenteditable="false">Intégration aux Moteurs compta</h3><p data-field="s4_p3_desc" contenteditable="false">Écritures comptables automatiques + <br>Carbon Passport par produit</p></div>
           <div class="pillar-arrow">→</div>
-          <div class="pillar"><div class="pillar-num accent-gold-bg">4</div><h3 data-field="s4_p4_title">Intelligence & Prévisions</h3><p data-field="s4_p4_desc">Cash flow, benchmarks, recommandations, alertes proactives</p></div>
+          <div class="pillar"><div class="pillar-num accent-gold-bg">4</div><h3 data-field="s4_p4_title" contenteditable="false">Intelligence &amp; Prévisions</h3><p data-field="s4_p4_desc" contenteditable="false">Dashboards, benchmarks, <br>recommandations, alertes proactives</p></div>
         </div>
-        <div class="metrics-bar brand-dark-bg" data-field="s4_metrics">99,5% précision · < 500ms traitement · Zéro intervention · Carbon Passport intégré</div>
+        <div class="metrics-bar brand-dark-bg" data-field="s4_metrics" contenteditable="false">99,5% précision · &lt; 500ms traitement · Zéro intervention user · Carbon Passport intégré</div>
       </div>
-      <div class="slide-footer">4/22</div>
+      <div class="slide-footer">4/23</div>
     </div>
-    <div class="slide light-slide" data-slide="5">
+    <div class="slide light-slide" data-slide="5" style="">
       <div class="slide-inner">
         <div class="accent-bar brand"></div>
-        <h2 class="slide-title" data-field="s5_title">Le Parcours Zéro-Touch</h2>
-        <p class="slide-subtitle" data-field="s5_subtitle">L'utilisateur ne fait rien — CloudCFO fait tout, en arrière plan</p>
+        <h2 class="slide-title" data-field="s5_title" contenteditable="false">Le Parcours Zéro-Touch</h2>
+        <p class="slide-subtitle" data-field="s5_subtitle" contenteditable="false">L'utilisateur ne fait rien — CloudCFO fait tout, en arrière plan</p>
         <div class="steps-list">
-          <div class="step"><div class="step-num brand-dark-bg">1</div><strong data-field="s5_s1_title">AutoDiscovery</strong><span data-field="s5_s1_desc">Connexion OAuth → détection automatique des factures, reçus, relevés, contrats etc…</span></div>
-          <div class="step"><div class="step-num brand-dark-bg">2</div><strong data-field="s5_s2_title">Extraction IA</strong><span data-field="s5_s2_desc">OCR + IA (Docling & BGE-Small & Langchain RAG) + HITL invisible → 99,5% de précision garantie</span></div>
-          <div class="step"><div class="step-num brand-bg">3</div><strong data-field="s5_s3_title">Output vérifié</strong><span data-field="s5_s3_desc">Data comptables intégrées aux moteurs comptables + Carbon Passport par produit généré</span></div>
-          <div class="step"><div class="step-num accent-gold-bg">4</div><strong data-field="s5_s4_title">Intelligence</strong><span data-field="s5_s4_desc">Prévisions cash flow, alertes, recommandations quantifiées, benchmarking</span></div>
+          <div class="step"><div class="step-num brand-dark-bg">1</div><strong data-field="s5_s1_title" contenteditable="false">AutoDiscovery</strong><span data-field="s5_s1_desc" contenteditable="false">Connexion OAuth → détection automatique des factures, reçus, relevés, contrats etc…</span></div>
+          <div class="step"><div class="step-num brand-dark-bg">2</div><strong data-field="s5_s2_title" contenteditable="false">Extraction IA</strong><span data-field="s5_s2_desc" contenteditable="false">OCR + IA (Docling &amp; BGE-Small &amp; Langchain RAG) + HITL invisible → 99,5% de précision garantie</span></div>
+          <div class="step"><div class="step-num brand-bg">3</div><strong data-field="s5_s3_title" contenteditable="false">Intégration&nbsp;</strong><span data-field="s5_s3_desc" contenteditable="false">Data comptables intégrées aux moteurs comptables + Carbon Passport par produit généré</span></div>
+          <div class="step"><div class="step-num accent-gold-bg">4</div><strong data-field="s5_s4_title" contenteditable="false">Intelligence</strong><span data-field="s5_s4_desc" contenteditable="false">Prévisions cash flow, alertes, recommandations quantifiées, benchmarking</span></div>
         </div>
-        <h3 class="section-label" data-field="s5_comp_title">Différenciation Concurrentielle</h3>
+        <h3 class="section-label" data-field="s5_comp_title" contenteditable="false">Différenciation Concurrentielle</h3>
         <table class="comp-table"><thead><tr><th></th><th>Qui travaille ?</th><th>Rapidité</th><th>Précision</th><th>Carbone</th><th>Intelligence</th></tr></thead>
         <tbody>
-          <tr><td data-field="s5_t_r1c0">Legacy (Excel)</td><td>Vous</td><td>✗</td><td>✗</td><td>✗</td><td>✗</td></tr>
-          <tr><td data-field="s5_t_r2c0">Pure-IA</td><td>IA seule</td><td>✓</td><td>~85%</td><td>✗</td><td>Limitée</td></tr>
-          <tr><td data-field="s5_t_r3c0">Services humains</td><td>Comptable</td><td>✗</td><td>~95%</td><td>✗</td><td>✗</td></tr>
-          <tr class="highlight-row"><td data-field="s5_t_r4c0">CloudCFO Hybride</td><td>Personne</td><td>✓</td><td>99,5%</td><td>✓</td><td>✓</td></tr>
+          <tr><td data-field="s5_t_r1c0" contenteditable="false">Legacy (Excel)</td><td>Vous</td><td>✗</td><td>✗</td><td>✗</td><td>✗</td></tr>
+          <tr><td data-field="s5_t_r2c0" contenteditable="false">Pure-IA</td><td>IA seule</td><td>✓</td><td>~85%</td><td>✗</td><td>Limitée</td></tr>
+          <tr><td data-field="s5_t_r3c0" contenteditable="false">Services humains</td><td>Comptable</td><td>✗</td><td>~95%</td><td>✗</td><td>✗</td></tr>
+          <tr class="highlight-row"><td data-field="s5_t_r4c0" contenteditable="false">CloudCFO Hybride (IA + HITL)</td><td>Personne</td><td>✓</td><td>99,5%</td><td>✓</td><td>✓</td></tr>
         </tbody></table>
       </div>
-      <div class="slide-footer">5/22</div>
+      <div class="slide-footer">5/23</div>
     </div>
-    <div class="slide dark-slide" data-slide="6">
+    <div class="slide dark-slide" data-slide="6" style="">
       <div class="slide-inner">
         <div class="accent-bar brand"></div>
-        <h2 class="slide-title brand" data-field="s6_title">Le Passport Carbon</h2>
-        <p class="slide-subtitle light" data-field="s6_subtitle">L'arme secrète qui transforme la conformité carbone en avantage compétitif</p>
+        <h2 class="slide-title brand" data-field="s6_title" contenteditable="false">Le Passport Carbon</h2>
+        <p class="slide-subtitle light" data-field="s6_subtitle" contenteditable="false">L'arme secrète qui transforme la conformité carbone en avantage compétitif</p>
         <div class="cards-4 white-cards">
-          <div class="card-white"><div class="card-icon">📈</div><h3 data-field="s6_c1_title">Suivi Automatique</h3><p data-field="s6_c1_desc">Empreinte carbone calculée par transaction (via Climatiq APIs)</p></div>
-          <div class="card-white"><div class="card-icon">💡</div><h3 data-field="s6_c2_title">Recommandations</h3><p data-field="s6_c2_desc">Actions concrètes pour compenser l'empreinte carbone et réduire les coûts CBAM</p></div>
-          <div class="card-white"><div class="card-icon">📜</div><h3 data-field="s6_c3_title">Conformité Réglementaire</h3><p data-field="s6_c3_desc">Document de conformité UE généré automatiquement par produit manufacturé</p></div>
-          <div class="card-white"><div class="card-icon">📊</div><h3 data-field="s6_c4_title">Rapports ESG</h3><p data-field="s6_c4_desc">Dashboards et exports conformes CSRD / SEC Climate</p></div>
+          <div class="card-white"><div class="card-icon">📈</div><h3 data-field="s6_c1_title" contenteditable="false">Suivi Automatique</h3><p data-field="s6_c1_desc" contenteditable="false">Empreinte carbone calculée par transaction (via Climatiq APIs)</p></div>
+          <div class="card-white"><div class="card-icon">💡</div><h3 data-field="s6_c2_title" contenteditable="false">Recommandations</h3><p data-field="s6_c2_desc" contenteditable="false">Actions concrètes pour compenser l'empreinte carbone et réduire les coûts CBAM</p></div>
+          <div class="card-white"><div class="card-icon">📜</div><h3 data-field="s6_c3_title" contenteditable="false">Conformité Réglementaire</h3><p data-field="s6_c3_desc" contenteditable="false">Document de conformité UE généré automatiquement par produit manufacturé</p></div>
+          <div class="card-white"><div class="card-icon">📊</div><h3 data-field="s6_c4_title" contenteditable="false">Rapports ESG</h3><p data-field="s6_c4_desc" contenteditable="false">Dashboards et exports <br>conformes CSRD / SEC Climate</p></div>
         </div>
-        <div class="price-callout" data-field="s6_price">+20 $/mois — contre des milliers d'euros pour un consultant carbone traditionnel</div>
-        <div class="quote-bar light" data-field="s6_quote">« Rendre la conformité carbone accessible à TOUTE PME marocaine exportatrice »</div>
+        <div class="price-callout" data-field="s6_price" contenteditable="false">+20 $/mois — contre des milliers d'euros pour un consultant carbone traditionnel</div>
+        <div class="quote-bar light" data-field="s6_quote" contenteditable="false">« Rendre la conformité carbone accessible à TOUTE PME marocaine/ africaine exportatrice »</div>
       </div>
-      <div class="slide-footer dark">6/22</div>
+      <div class="slide-footer dark">6/23</div>
     </div>
-    <div class="slide light-slide" data-slide="7">
+    <div class="slide light-slide" data-slide="7" style="">
       <div class="slide-inner">
         <div class="accent-bar accent-gold"></div>
-        <h2 class="slide-title" data-field="s7_title">Nos Innovations — Axe 1 : Innovation Propre</h2>
-        <p class="slide-subtitle" data-field="s7_subtitle">Cadre du Manuel d'Oslo (OCDE) — Produit nouveau + Procédé nouveau</p>
+        <h2 class="slide-title" data-field="s7_title" contenteditable="false">Nos Innovations — Axe 1 : Innovation Propre</h2>
+        <p class="slide-subtitle" data-field="s7_subtitle" contenteditable="false">Selon le Manuel d'Oslo (OCDE) — Produit nouveau + Procédé nouveau</p>
         <div class="two-col equal">
           <div class="inno-card"><div class="card-accent brand-dark"></div>
-            <h3 class="brand-dark-text" data-field="s7_left_title">🔧 Innovation Produit</h3>
-            <p class="inno-label accent-gold-text" data-field="s7_left_label">La Couche d'Intelligence Intermédiaire</p>
-            <p data-field="s7_left_desc">CloudCFO crée le « cerveau » manquant entre la donnée brute et les moteurs d'exécution (QuickBooks, Xero, Climatiq).</p>
+            <h3 class="brand-dark-text" data-field="s7_left_title" contenteditable="false">🔧 Innovation Produit</h3>
+            <p class="inno-label accent-gold-text" data-field="s7_left_label" contenteditable="false">La Couche d'Intelligence Intermédiaire</p>
+            <p data-field="s7_left_desc" contenteditable="false">CloudCFO crée le « cerveau » manquant entre la donnée brute et les moteurs d'exécution (QuickBooks, Xero, Climatiq).</p>
             <ul>
-              <li data-field="s7_left_l1">Qualification documentaire : type, langue, qualité, routage</li>
-              <li data-field="s7_left_l2">Extraction duale simultanée : finance + carbone en <500ms</li>
-              <li data-field="s7_left_l3">Normalisation contextuelle : ISO 8601, ISO 4217, décimaux</li>
-              <li data-field="s7_left_l4">Auto-enrichissement : Knowledge Base auto-apprenante</li>
+              <li data-field="s7_left_l1" contenteditable="false">&nbsp; &nbsp;Qualification documentaire : type, langue, qualité, routage</li>
+              <li data-field="s7_left_l2" contenteditable="false">&nbsp; &nbsp;Extraction duale simultanée : finance + carbone en &lt;500ms&nbsp;</li>
+              <li data-field="s7_left_l3" contenteditable="false">&nbsp; &nbsp;Normalisation contextuelle : ISO 8601, ISO 4217, décimaux</li>
+              <li data-field="s7_left_l4" contenteditable="false">&nbsp; &nbsp;Auto-enrichissement : Knowledge Base auto-apprenante</li>
             </ul>
-            <div class="inno-badge brand-dark-light" data-field="s7_left_badge">Matérialisée par <strong>MerlinData.ai</strong> — CloudCFO = 1er client & POC</div>
+            <div class="inno-badge brand-dark-light" data-field="s7_left_badge" contenteditable="false">Powered by&nbsp;<strong>MerlinData.ai</strong> —&nbsp; &nbsp; &nbsp;CloudCFO = 1er client vertical &amp; POC</div>
           </div>
           <div class="inno-card"><div class="card-accent brand"></div>
-            <h3 class="brand-text" data-field="s7_right_title">⚙️ Innovation Procédé</h3>
-            <p class="inno-label accent-gold-text" data-field="s7_right_label">L'Intelligence Hybride : IA + HITL</p>
-            <p data-field="s7_right_desc">Un procédé structurel — pas un filet de sécurité temporaire — qui garantit 100% de données vérifiées.</p>
+            <h3 class="brand-text" data-field="s7_right_title" contenteditable="false">⚙️ Innovation Procédé</h3>
+            <p class="inno-label accent-gold-text" data-field="s7_right_label" contenteditable="false">L'Intelligence Hybride : IA + HITL</p>
+            <p data-field="s7_right_desc" contenteditable="false">Un procédé structurel — pas un filet de sécurité temporaire — qui garantit 100% de données vérifiées.</p>
             <div class="pct-rows">
-              <div class="pct-row"><span class="pct brand-bg">97%+</span><span data-field="s7_r_p1">auto-approuvées instantanément (<500ms)</span></div>
-              <div class="pct-row"><span class="pct accent-gold-bg">< 3%</span><span data-field="s7_r_p2">routées vers analystes financiers internes</span></div>
-              <div class="pct-row"><span class="pct brand-dark-bg">100%</span><span data-field="s7_r_p3">corrections réinjectées dans Knowledge Base</span></div>
-              <div class="pct-row"><span class="pct brand-bg">100%</span><span data-field="s7_r_p4">output vérifié garanti (IA + expert humain)</span></div>
+              <div class="pct-row"><span class="pct brand-bg">97%+</span><span data-field="s7_r_p1" contenteditable="false">auto-approuvées instantanément (&lt;500ms)</span></div>
+              <div class="pct-row"><span class="pct accent-gold-bg">&lt; 3%</span><span data-field="s7_r_p2" contenteditable="false">routées vers analystes financiers internes</span></div>
+              <div class="pct-row"><span class="pct brand-dark-bg">100%</span><span data-field="s7_r_p3" contenteditable="false">corrections réinjectées dans Knowledge Base</span></div>
+              <div class="pct-row"><span class="pct brand-bg">100%</span><span data-field="s7_r_p4" contenteditable="false">output vérifié garanti (IA + expert humain)</span></div>
             </div>
-            <div class="inno-badge brand-light" data-field="s7_right_badge">Chaque erreur rend le système plus intelligent — la faiblesse perçue de l'IA devient un avantage compétitif</div>
+            <div class="inno-badge brand-light" data-field="s7_right_badge" contenteditable="false">Chaque erreur rend le système plus intelligent — la faiblesse perçue de l'IA devient un avantage compétitif</div>
           </div>
         </div>
-        <div class="metrics-bar brand-dark-bg" data-field="s7_bottom">Aucun concurrent ne fait l'extraction duale (finance + carbone) en <500ms avec un output 100% vérifié</div>
+        <div class="metrics-bar brand-dark-bg" data-field="s7_bottom" contenteditable="false">Aucun concurrent ne fait l'extraction duale (finance + carbone) en &lt;500ms avec un output 100% vérifié</div>
       </div>
-      <div class="slide-footer">7/22</div>
+      <div class="slide-footer">7/23</div>
     </div>
-    <div class="slide light-slide" data-slide="8">
+    <div class="slide light-slide" data-slide="8" style="">
       <div class="slide-inner">
         <div class="accent-bar brand"></div>
-        <h2 class="slide-title" data-field="s8_title">Nos Innovations — Axe 2 : Innovation d'Adaptation</h2>
-        <p class="slide-subtitle" data-field="s8_subtitle">Cadre du Manuel d'Oslo (OCDE) — Commercialisation + Organisation</p>
+        <h2 class="slide-title" data-field="s8_title" contenteditable="false">Nos Innovations — Axe 2 : Innovation d'Adaptation</h2>
+        <p class="slide-subtitle" data-field="s8_subtitle" contenteditable="false">Selon le&nbsp;Manuel d'Oslo (OCDE) — Commercialisation + Organisation</p>
         <div class="two-col equal">
           <div class="inno-card"><div class="card-accent accent-gold"></div>
-            <h3 class="accent-gold-text" data-field="s8_left_title">🚀 Innovation Commerciale</h3>
-            <p class="small-italic" data-field="s8_left_label">Création de marché en amont des moteurs comptables</p>
-            <p data-field="s8_left_p1"><strong>Carbon Passport</strong> — créateur de catégorie : conformité CBAM automatisée à +20$/mois vs milliers d'€ consultant</p>
-            <p data-field="s8_left_p2"><strong>Carbon Academy</strong> — canal d'acquisition par formation : certifications, webinaires, communauté prescripteurs</p>
-            <p data-field="s8_left_p3"><strong>Zero-Touch / AutoDiscovery</strong> — promesse radicale : « vous ne faites plus rien » → nouvelle eXpérience Client</p>
+            <h3 class="accent-gold-text" data-field="s8_left_title" contenteditable="false">🚀 Innovation Commerciale</h3>
+            <p class="small-italic" data-field="s8_left_label" contenteditable="false">Création du marché en amont des moteurs comptables, via :</p>
+            <p data-field="s8_left_p1" contenteditable="false"><strong>Carbon Passport</strong> — conformité EU automatisée à +20$/mois vs milliers d'€ consultant</p>
+            <p data-field="s8_left_p2" contenteditable="false"><strong>Carbon Academy</strong> — canal d'acquisition par la formation : formation online, certifications, webinaires, communauté prescripteurs</p>
+            <p data-field="s8_left_p3" contenteditable="false"><strong>Zero-Touch / AutoDiscovery</strong> — promesse radicale : « vous ne faites plus rien » → une eXpérience Client transformée et révolutionnaire (permise par l'automatisation avancée)</p>
           </div>
           <div class="inno-card"><div class="card-accent brand-dark"></div>
-            <h3 class="brand-dark-text" data-field="s8_right_title">🏢 Innovation Organisationnelle</h3>
-            <p class="small-italic" data-field="s8_right_label">Architecture plateforme duale dès le jour 1</p>
-            <p data-field="s8_right_p1"><strong>MerlinData.ai</strong> (horizontal) : infrastructure IA applicable à tout secteur — API-first, modulaire</p>
-            <p data-field="s8_right_p2"><strong>CloudCFO.ai</strong> (vertical SaaS) : 1er client MerlinData, spécialisé comptabilité + carbone</p>
-            <p data-field="s8_right_p3"><strong>Équipe HITL structurée</strong> — 4 postes sur 12 : actif stratégique, pas un coût. Génère PI (patterns Knowledge Base)</p>
+            <h3 class="brand-dark-text" data-field="s8_right_title" contenteditable="false">🏢 Innovation Organisationnelle</h3>
+            <p class="small-italic" data-field="s8_right_label" contenteditable="false">Architecture plateforme duale dès le jour 1</p>
+            <p data-field="s8_right_p1" contenteditable="false"><strong>MerlinData.ai</strong> (infra horizontale) : infrastructure IA applicable à tout secteur — API-first, modulaire</p>
+            <p data-field="s8_right_p2" contenteditable="false"><strong>CloudCFO.ai</strong> (vertical SaaS) : 1er client MerlinData, spécialisé comptabilité + carbone</p>
+            <p data-field="s8_right_p3" contenteditable="false"><strong>Équipe HITL structurée</strong> — 4 postes sur 12 : actif stratégique, pas un coût. Génère PI (patterns Knowledge Base)</p>
           </div>
         </div>
-        <h3 class="section-label" data-field="s8_synth_title">Synthèse des 4 Dimensions d'Innovation</h3>
+        <h3 class="section-label" data-field="s8_synth_title" contenteditable="false">Synthèse :<br>Les 4 Dimensions d'Innovation</h3>
         <table class="synth-table"><thead><tr><th>Dimension</th><th>Innovation</th><th>Caractère distinctif</th></tr></thead>
         <tbody>
-          <tr><td class="brand-text bold" data-field="s8_t_r1c0">Produit</td><td data-field="s8_t_r1c1">Couche d'intelligence intermédiaire (powered by MerlinData)</td><td data-field="s8_t_r1c2">Extraction duale (finance + carbone) <500ms</td></tr>
-          <tr><td class="brand-text bold" data-field="s8_t_r2c0">Procédé</td><td data-field="s8_t_r2c1">Intelligence Hybride : IA + HITL</td><td data-field="s8_t_r2c2">Output 100% vérifié garanti — auto-apprenant</td></tr>
-          <tr><td class="brand-text bold" data-field="s8_t_r3c0">Commercialisation</td><td data-field="s8_t_r3c1">Carbon Passport + Academy + Zero-Touch / AutoDiscovery</td><td data-field="s8_t_r3c2">Crée un marché nouveau — nouvelle eXpérience Client</td></tr>
-          <tr><td class="brand-text bold" data-field="s8_t_r4c0">Organisation</td><td data-field="s8_t_r4c1">Architecture duale + HITL structuré</td><td data-field="s8_t_r4c2">Infrastructure horizontale dès jour 1 — HITL = actif stratégique</td></tr>
+          <tr><td class="brand-text bold" data-field="s8_t_r1c0" contenteditable="false">Produit</td><td data-field="s8_t_r1c1" contenteditable="false">1ère Couche d'intelligence intermédiaire (powered by MerlinData) qui transforme les Datas non structurées</td><td data-field="s8_t_r1c2" contenteditable="false">Extraction duale (finance + carbone) &lt;500ms</td></tr>
+          <tr><td class="brand-text bold" data-field="s8_t_r2c0" contenteditable="false">Procédé</td><td data-field="s8_t_r2c1" contenteditable="false">Intelligence Hybride permanente : Solution IA + HITL</td><td data-field="s8_t_r2c2" contenteditable="false">Output 100% vérifié garanti — auto-apprenant</td></tr>
+          <tr><td class="brand-text bold" data-field="s8_t_r3c0" contenteditable="false">Commercialisation</td><td data-field="s8_t_r3c1" contenteditable="false">Carbon Passport (en un clic) + CloudCFO Academy + Zero-Touch/ AutoDiscovery</td><td data-field="s8_t_r3c2" contenteditable="false">Crée un marché nouveau — une rupture dans l'eXpérience Client</td></tr>
+          <tr><td class="brand-text bold" data-field="s8_t_r4c0" contenteditable="false">Organisation</td><td data-field="s8_t_r4c1" contenteditable="false">Architecture duale horizontale puis verticale + HITL structuré</td><td data-field="s8_t_r4c2" contenteditable="false">Infrastructure horizontale dès jour 1 — HITL = actif stratégique</td></tr>
         </tbody></table>
       </div>
-      <div class="slide-footer">8/22</div>
+      <div class="slide-footer">8/23</div>
     </div>
-    <div class="slide light-slide" data-slide="9">
+    <div class="slide dark-slide-alt" data-slide="9" style="">
       <div class="slide-inner">
         <div class="accent-bar brand"></div>
-        <h2 class="slide-title" data-field="s9_title">POC & Validation Technique</h2>
-        <p class="slide-subtitle" data-field="s9_subtitle">Résultats concrets sur 5 000 documents réels achetés en 5 lots de 1 000</p>
-        <div class="big-metrics">
-          <div class="big-metric"><span class="big-num brand-text">99,5%</span><span>Précision</span></div>
-          <div class="big-metric"><span class="big-num brand-dark-text"><500ms</span><span>Traitement</span></div>
-          <div class="big-metric"><span class="big-num accent-gold-text">90%</span><span>Réduction HITL</span></div>
-          <div class="big-metric"><span class="big-num brand-text">5+</span><span>Devises</span></div>
-        </div>
-        <div class="two-col equal">
-          <div class="detail-card brand-dark-accent"><h3 data-field="s9_left_title">📄 Corpus de Test</h3>
-            <ul><li data-field="s9_l_l1">5 lots de 1 000 documents achetés (5 000 total)</li><li data-field="s9_l_l2">Factures, contrats, reçus, documents comptables</li><li data-field="s9_l_l3">Formats variés : PDF, images, scans, reçus de caisse</li><li data-field="s9_l_l4">Multi-devises : USD, EUR, CHF, GBP, MAD</li></ul>
+        <h2 class="slide-title-grafana" data-field="s9a_title">🔬 POC — Pipeline d'Évaluation Automatisé</h2>
+        <p class="slide-subtitle-grafana" data-field="s9a_subtitle">Infrastructure de validation technique en production — mesure continue de la précision d'extraction</p>
+
+        <!-- PIPELINE FLOW -->
+        <div class="pipeline-flow">
+          <div class="pipeline-node">
+            <span class="pn-icon">📄</span>
+            <span class="pn-title" data-field="s9a_pn1">Documents Source</span>
+            <span class="pn-sub">5 types financiers</span>
           </div>
-          <div class="detail-card brand-accent"><h3 data-field="s9_right_title">🤖 Résultats & Apprentissage</h3>
-            <ul><li data-field="s9_r_l1">99,5% d'extraction correcte validée en production</li><li data-field="s9_r_l2">OCR + structuration + catégorisation < 500ms</li><li data-field="s9_r_l3">Base auto-apprenante : chaque correction enrichit le système</li><li data-field="s9_r_l4">90% de réduction du volume HITL au fil du temps</li></ul>
+          <span class="pipeline-arrow">→</span>
+          <div class="pipeline-node active">
+            <span class="pn-icon">🧠</span>
+            <span class="pn-title" data-field="s9a_pn2">Docling-RAG v1</span>
+            <span class="pn-sub">IBM Docling + BGE-Small + LangChain</span>
+          </div>
+          <span class="pipeline-arrow">→</span>
+          <div class="pipeline-node">
+            <span class="pn-icon">🗄️</span>
+            <span class="pn-title" data-field="s9a_pn3">PostgreSQL</span>
+            <span class="pn-sub">source_of_truth + tests schemas</span>
+          </div>
+          <span class="pipeline-arrow">→</span>
+          <div class="pipeline-node">
+            <span class="pn-icon">⚙️</span>
+            <span class="pn-title" data-field="s9a_pn4">SQL Eval Views</span>
+            <span class="pn-sub">field_results + run_accuracy</span>
+          </div>
+          <span class="pipeline-arrow">→</span>
+          <div class="pipeline-node active">
+            <span class="pn-icon">📊</span>
+            <span class="pn-title" data-field="s9a_pn5">Grafana</span>
+            <span class="pn-sub">5 dashboards temps réel</span>
           </div>
         </div>
-        <div class="learning-bar" data-field="s9_bottom">🧠 Base de connaissances auto-apprenante — chaque document traité améliore la précision du système</div>
+
+        <!-- TWO COLUMNS: Architecture + Grafana Preview -->
+        <div style="display:flex;gap:14px;margin-top:10px">
+
+          <!-- LEFT: Ground Truth Schema -->
+          <div class="grafana-panel" style="flex:1">
+            <h4 data-field="s9a_left_title">Ground Truth Database — PostgreSQL</h4>
+            <div style="font-family:'Courier New',monospace;font-size:9px;color:rgba(255,255,255,.7);line-height:1.6;background:#12141A;border-radius:8px;padding:10px">
+              <span style="color:#4ADE80">CREATE SCHEMA</span> source_of_truth;<br>
+              <span style="color:#4ADE80">CREATE SCHEMA</span> tests;<br><br>
+              <span style="color:rgba(255,255,255,.35)">-- Par type de document :</span><br>
+              <span style="color:#F59E0B">TABLE</span> source_of_truth.{type}_documents (<br>
+              &nbsp;&nbsp;document_id <span style="color:#86EFAC">TEXT UNIQUE</span>,<br>
+              &nbsp;&nbsp;fields <span style="color:#86EFAC">JSONB</span>,<br>
+              &nbsp;&nbsp;line_items <span style="color:#86EFAC">JSONB</span> )<br><br>
+              <span style="color:#F59E0B">TABLE</span> tests.{type}_documents (<br>
+              &nbsp;&nbsp;document_id, run_id, <span style="color:#86EFAC">model_name</span>,<br>
+              &nbsp;&nbsp;<span style="color:#86EFAC">prompt_tag</span>, fields, line_items )<br><br>
+              <span style="color:#4ADE80">VIEW</span> eval.{type}_field_results<br>
+              <span style="color:#4ADE80">VIEW</span> eval.{type}_run_accuracy
+            </div>
+            <!-- Document type pills -->
+            <div class="doc-type-pills">
+              <span class="doc-pill active">Fuel Receipt</span>
+              <span class="doc-pill">Invoice</span>
+              <span class="doc-pill">Shipping</span>
+              <span class="doc-pill">Manufacturing</span>
+              <span class="doc-pill">Utility Bill</span>
+            </div>
+          </div>
+
+          <!-- RIGHT: Monitoring Stack -->
+          <div style="flex:1;display:flex;flex-direction:column;gap:10px">
+            <div class="grafana-panel" style="flex:1">
+              <h4 data-field="s9a_right_title">Monitoring Production — Prometheus + Slack</h4>
+              <div style="font-size:10px;color:rgba(255,255,255,.6);margin-bottom:8px" data-field="s9a_mon_desc">Infrastructure monitorée 24/7 via Prometheus → Grafana → Slack (workspace CloudCFO)</div>
+              <div class="monitoring-bar">
+                <div class="mon-channel"><span class="mon-dot red"></span><div><span class="mon-name">#alerts-critical</span><br><span class="mon-type">Prometheus severity:critical</span></div></div>
+                <div class="mon-channel"><span class="mon-dot orange"></span><div><span class="mon-name">#rag-vps</span><br><span class="mon-type">RAG pipeline health</span></div></div>
+              </div>
+              <div class="monitoring-bar">
+                <div class="mon-channel"><span class="mon-dot orange"></span><div><span class="mon-name">#n8n-vps</span><br><span class="mon-type">Orchestration routing</span></div></div>
+                <div class="mon-channel"><span class="mon-dot green"></span><div><span class="mon-name">#queues</span><br><span class="mon-type">RabbitMQ queue depth</span></div></div>
+              </div>
+            </div>
+            <div class="grafana-panel">
+              <h4>Stack Technique</h4>
+              <div style="display:flex;gap:6px;flex-wrap:wrap">
+                <span class="stack-label">n8n</span>
+                <span class="stack-label">PostgreSQL</span>
+                <span class="stack-label">RabbitMQ</span>
+                <span class="stack-label">MinIO</span>
+                <span class="stack-label">Redis</span>
+                <span class="stack-label">Grafana</span>
+                <span class="stack-label">Prometheus</span>
+                <span class="stack-label">Slack</span>
+                <span class="stack-label">IBM Docling</span>
+                <span class="stack-label">BGE-Small</span>
+                <span class="stack-label">LangChain RAG</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align:center;margin-top:10px;font-size:10px;color:rgba(255,255,255,.3)" data-field="s9a_footer_text">Accessible en temps réel : n8n.cloudcfo.ai/grafana — Infrastructure de validation, pas une simple affirmation</div>
       </div>
-      <div class="slide-footer">9/22</div>
+      <div class="slide-footer dark">9/23</div>
     </div>
-    <div class="slide light-slide" data-slide="10">
+    <div class="slide dark-slide-alt" data-slide="10" style="">
+      <div class="slide-inner">
+        <div class="accent-bar accent-gold"></div>
+        <h2 class="slide-title-grafana" data-field="s9b_title">📊 Résultats Mesurés — Grafana Live</h2>
+        <p class="slide-subtitle-grafana" data-field="s9b_subtitle">Extraction accuracy mesurée et reproductible — Fuel Receipt Evaluation (référence)</p>
+
+        <div style="display:flex;gap:14px">
+
+          <!-- LEFT COLUMN: Big number + Runs table -->
+          <div style="flex:1;display:flex;flex-direction:column;gap:10px">
+            <!-- Average Accuracy Panel -->
+            <div class="grafana-panel" style="text-align:center;padding:16px">
+              <h4>Fuel Receipt — Average Accuracy</h4>
+              <div class="grafana-big" data-field="s9b_accuracy">97.8<span style="font-size:30px">%</span></div>
+              <div class="grafana-big-sub">docling_rag_v1 · fuel_receipt_v1 · 6 runs</div>
+            </div>
+
+            <!-- Runs Overview -->
+            <div class="grafana-panel" style="flex:1">
+              <h4>Runs Overview — FUEL_001</h4>
+              <table class="grafana-table">
+                <thead><tr><th>Run</th><th>Model</th><th>Prompt Tag</th><th style="text-align:right">Accuracy</th></tr></thead>
+                <tbody>
+                  <tr><td style="color:rgba(255,255,255,.45)">2026-01-17 20:17</td><td>docling_rag_v1</td><td>fuel_receipt_v1</td><td class="acc acc-high">96.3%</td></tr>
+                  <tr><td style="color:rgba(255,255,255,.45)">2026-01-17 20:16</td><td>docling_rag_v1</td><td>fuel_receipt_v1</td><td class="acc acc-high">96.3%</td></tr>
+                  <tr><td style="color:rgba(255,255,255,.45)">2026-01-17 20:14</td><td>docling_rag_v1</td><td>fuel_receipt_v1</td><td class="acc acc-perfect">100%</td></tr>
+                  <tr><td style="color:rgba(255,255,255,.45)">2026-01-17 20:14</td><td>docling_rag_v1</td><td>fuel_receipt_v1</td><td class="acc acc-high">96.3%</td></tr>
+                  <tr><td style="color:rgba(255,255,255,.45)">2026-01-17 20:13</td><td>docling_rag_v1</td><td>fuel_receipt_v1</td><td class="acc acc-high">96.3%</td></tr>
+                  <tr><td style="color:rgba(255,255,255,.45)">2026-01-17 20:12</td><td>docling_rag_v1</td><td>fuel_receipt_v1</td><td class="acc acc-perfect">100%</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN: Section breakdown + Field-level -->
+          <div style="flex:1;display:flex;flex-direction:column;gap:10px">
+
+            <!-- Section Accuracy Breakdown -->
+            <div class="grafana-panel">
+              <h4>Section Accuracy Breakdown</h4>
+              <div class="section-score">
+                <div class="sec-item"><span class="sec-val">100%</span><span class="sec-label">Core Fields</span></div>
+                <div class="sec-item"><span class="sec-val">100%</span><span class="sec-label">Fuel Summary</span></div>
+                <div class="sec-item"><span class="sec-val">100%</span><span class="sec-label">Line Items</span></div>
+              </div>
+            </div>
+
+            <!-- Field-level Breakdown -->
+            <div class="grafana-panel" style="flex:1">
+              <h4>Field-Level Breakdown (Selected Run)</h4>
+              <div class="field-grid">
+                <div class="field-tag"><span>vendor_name</span><span class="grafana-check">✓</span></div>
+                <div class="field-tag"><span>station_address</span><span class="grafana-check">✓</span></div>
+                <div class="field-tag"><span>transaction_id</span><span class="grafana-check">✓</span></div>
+                <div class="field-tag"><span>transaction_date</span><span class="grafana-check">✓</span></div>
+                <div class="field-tag"><span>transaction_time</span><span class="grafana-check">✓</span></div>
+                <div class="field-tag"><span>payment_method</span><span class="grafana-check">✓</span></div>
+                <div class="field-tag"><span>vehicle_id</span><span class="grafana-check">✓</span></div>
+                <div class="field-tag"><span>fuel_type</span><span class="grafana-check">✓</span></div>
+                <div class="field-tag"><span>quantity</span><span class="grafana-check">✓</span></div>
+                <div class="field-tag"><span>unit_price</span><span class="grafana-check">✓</span></div>
+                <div class="field-tag"><span>total_amount</span><span class="grafana-check">✓</span></div>
+                <div class="field-tag"><span>currency</span><span class="grafana-check">✓</span></div>
+              </div>
+            </div>
+
+            <!-- Accuracy Chart (visual bars) -->
+            <div class="grafana-panel">
+              <h4>Accuracy per Run (Visual)</h4>
+              <div class="run-bar" style="height:50px;align-items:flex-end">
+                <div class="run-col" style="height:85%;background:linear-gradient(to top,#166534,#22C55E)"><span class="run-val">96.3</span></div>
+                <div class="run-col" style="height:85%;background:linear-gradient(to top,#166534,#22C55E)"><span class="run-val">96.3</span></div>
+                <div class="run-col" style="height:100%;background:linear-gradient(to top,#15803D,#4ADE80)"><span class="run-val">100</span></div>
+                <div class="run-col" style="height:85%;background:linear-gradient(to top,#166534,#22C55E)"><span class="run-val">96.3</span></div>
+                <div class="run-col" style="height:85%;background:linear-gradient(to top,#166534,#22C55E)"><span class="run-val">96.3</span></div>
+                <div class="run-col" style="height:100%;background:linear-gradient(to top,#15803D,#4ADE80)"><span class="run-val">100</span></div>
+              </div>
+              <div style="display:flex;justify-content:space-between;font-size:8px;color:rgba(255,255,255,.3);margin-top:4px"><span>Run 1</span><span>Run 2</span><span>Run 3</span><span>Run 4</span><span>Run 5</span><span>Run 6</span></div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 5 Document Types Status Bar -->
+        <div style="display:flex;gap:8px;margin-top:10px">
+          <div style="flex:1;background:#181B1F;border:1px solid #22C55E;border-radius:8px;padding:6px 10px;text-align:center"><span style="font-size:10px;font-weight:700;color:#22C55E">Fuel Receipt</span><br><span style="font-size:16px;font-weight:700;color:#4ADE80">97.8%</span></div>
+          <div style="flex:1;background:#181B1F;border:1px solid #2A2D33;border-radius:8px;padding:6px 10px;text-align:center"><span style="font-size:10px;font-weight:600;color:rgba(255,255,255,.5)">Invoice</span><br><span style="font-size:16px;font-weight:700;color:rgba(255,255,255,.35)">En cours</span></div>
+          <div style="flex:1;background:#181B1F;border:1px solid #2A2D33;border-radius:8px;padding:6px 10px;text-align:center"><span style="font-size:10px;font-weight:600;color:rgba(255,255,255,.5)">Shipping</span><br><span style="font-size:16px;font-weight:700;color:rgba(255,255,255,.35)">En cours</span></div>
+          <div style="flex:1;background:#181B1F;border:1px solid #2A2D33;border-radius:8px;padding:6px 10px;text-align:center"><span style="font-size:10px;font-weight:600;color:rgba(255,255,255,.5)">Manufacturing</span><br><span style="font-size:16px;font-weight:700;color:rgba(255,255,255,.35)">En cours</span></div>
+          <div style="flex:1;background:#181B1F;border:1px solid #2A2D33;border-radius:8px;padding:6px 10px;text-align:center"><span style="font-size:10px;font-weight:600;color:rgba(255,255,255,.5)">Utility Bill</span><br><span style="font-size:16px;font-weight:700;color:rgba(255,255,255,.35)">En cours</span></div>
+        </div>
+      </div>
+      <div class="slide-footer dark">10/23</div>
+    </div>
+    <div class="slide light-slide" data-slide="11" style="">
       <div class="slide-inner">
         <div class="accent-bar brand-dark"></div>
-        <h2 class="slide-title" data-field="s10_title">Opportunité de Marché</h2>
-        <p class="slide-subtitle" data-field="s10_subtitle">Un marché de $250B+ en pleine transformation réglementaire</p>
+        <h2 class="slide-title" data-field="s10_title" contenteditable="false">Opportunité de Marché</h2>
+        <p class="slide-subtitle" data-field="s10_subtitle" contenteditable="false">Un marché de $250B+ en pleine transformation réglementaire</p>
         <div class="market-top">
-          <div class="tam-box"><span class="tam-label">TAM</span><span class="tam-value" data-field="s10_tam">$250B+</span></div>
+          <div class="tam-box"><span class="tam-label">TAM</span><span class="tam-value" data-field="s10_tam" contenteditable="false">$250Bln+</span></div>
           <div class="seg-cards">
-            <div class="seg-card"><span class="seg-value brand-dark-text" data-field="s10_seg1_val">20M+</span><span data-field="s10_seg1_label">PME USA/Canada (1–10 emp.)</span></div>
-            <div class="seg-card"><span class="seg-value brand-text" data-field="s10_seg2_val">120M+</span><span data-field="s10_seg2_label">Freelancers</span></div>
-            <div class="seg-card"><span class="seg-value accent-gold-text" data-field="s10_seg3_val">500K+</span><span data-field="s10_seg3_label">Comptables</span></div>
+            <div class="seg-card"><span class="seg-value brand-dark-text" data-field="s10_seg1_val" contenteditable="false">20M+</span><span data-field="s10_seg1_label" contenteditable="false">PME USA/Canada (1–10 emp.)</span></div>
+            <div class="seg-card"><span class="seg-value brand-text" data-field="s10_seg2_val" contenteditable="false">170M+</span><span data-field="s10_seg2_label" contenteditable="false">Freelancers</span></div>
+            <div class="seg-card"><span class="seg-value accent-gold-text" data-field="s10_seg3_val" contenteditable="false">500K+</span><span data-field="s10_seg3_label" contenteditable="false">Comptables</span></div>
           </div>
         </div>
         <div class="cards-4 driver-cards">
-          <div class="driver"><div class="card-icon">📜</div><h3 data-field="s10_d1_title">Facturation digitale</h3><p data-field="s10_d1_desc">Obligation 2026 → marché captif</p></div>
-          <div class="driver"><div class="card-icon">🌿</div><h3 data-field="s10_d2_title">Carbon Passport</h3><p data-field="s10_d2_desc">Exportateurs Marocains → demande massive</p></div>
-          <div class="driver"><div class="card-icon">🌍</div><h3 data-field="s10_d3_title">Hub africain</h3><p data-field="s10_d3_desc">Maroc = porte d'entrée Afrique</p></div>
-          <div class="driver"><div class="card-icon">🛡️</div><h3 data-field="s10_d4_title">Mandats EU ESG</h3><p data-field="s10_d4_desc">Réglementations ESG croissantes</p></div>
+          <div class="driver"><div class="card-icon">📜</div><h3 data-field="s10_d1_title" contenteditable="false">Facturation digitale</h3><p data-field="s10_d1_desc" contenteditable="false">Obligation 2026 → marché captif</p></div>
+          <div class="driver"><div class="card-icon">🌿</div><h3 data-field="s10_d2_title" contenteditable="false">Carbon Passport</h3><p data-field="s10_d2_desc" contenteditable="false">Exportateurs Marocains → demande massive</p></div>
+          <div class="driver"><div class="card-icon">🌍</div><h3 data-field="s10_d3_title" contenteditable="false">Marché africain</h3><p data-field="s10_d3_desc" contenteditable="false">Maroc puis expansion en Afrique</p></div>
+          <div class="driver"><div class="card-icon">🛡️</div><h3 data-field="s10_d4_title" contenteditable="false">Mandats EU ESG</h3><p data-field="s10_d4_desc" contenteditable="false">Réglementations ESG croissantes</p></div>
         </div>
-        <div class="metrics-bar brand-dark-bg" data-field="s10_geo">USA/Canada 65–70% · UE/Suisse 20–25% · Maroc/Afrique 10%</div>
+        <div class="metrics-bar brand-dark-bg" data-field="s10_geo" contenteditable="false">USA/Canada 65–70% · UE/Suisse 20–25% · Maroc/Afrique 10%</div>
       </div>
-      <div class="slide-footer">10/22</div>
+      <div class="slide-footer">11/23</div>
     </div>
-    <div class="slide light-slide" data-slide="11">
+    <div class="slide light-slide" data-slide="12" style="">
       <div class="slide-inner">
         <div class="accent-bar accent-gold"></div>
-        <h2 class="slide-title" data-field="s11_title">Modèle Économique</h2>
-        <p class="slide-subtitle" data-field="s11_subtitle">SaaS récurrent avec add-on Carbon Passport à forte marge</p>
+        <h2 class="slide-title" data-field="s11_title" contenteditable="false">Modèle Économique</h2>
+        <p class="slide-subtitle" data-field="s11_subtitle" contenteditable="false">SaaS récurrent avec add-on Carbon Passport à forte marge</p>
         <div class="two-col biz">
           <div>
             <table class="biz-table"><thead><tr><th>Segment</th><th>Mix</th><th>ARPU</th><th>LTV</th><th>Churn</th></tr></thead>
@@ -623,60 +844,60 @@ h1,h2,h3,.font-heading{font-family:'Georgia',serif}
             </tbody></table>
           </div>
           <div class="unit-econ">
-            <h3 data-field="s11_ue_title">Unit Economics</h3>
-            <ul><li data-field="s11_ue_l1"><strong>LTV pondéré :</strong> $1 351</li><li data-field="s11_ue_l2"><strong>Add-on Carbon :</strong> +$20/mois</li><li data-field="s11_ue_l3"><strong>CAC cible :</strong> < $150</li><li data-field="s11_ue_l4" class="brand-text bold"><strong>LTV:CAC > 9x</strong></li></ul>
+            <h3 data-field="s11_ue_title" contenteditable="false">Unit Economics</h3>
+            <ul><li data-field="s11_ue_l1" contenteditable="false"><strong>LTV pondéré :</strong>&nbsp; &nbsp; &nbsp; &nbsp; $1 351</li><li data-field="s11_ue_l2" contenteditable="false"><strong>Add-on Carbon :</strong> +$20/mois</li><li data-field="s11_ue_l3" contenteditable="false"><strong>CAC cible :</strong> &lt; $150</li><li data-field="s11_ue_l4" class="brand-text bold" contenteditable="false"><strong>LTV:CAC.&nbsp; &nbsp; &gt; 9x</strong></li></ul>
           </div>
         </div>
         <div class="pricing-tiers">
-          <div class="tier"><div class="tier-accent muted"></div><h3>Starter</h3><span class="tier-price">$20/mois</span><p data-field="s11_tier1">Freelancers & auto-entrepreneurs</p></div>
-          <div class="tier"><div class="tier-accent brand"></div><h3>Pro</h3><span class="tier-price">$42–62/mois</span><p data-field="s11_tier2">PME & e-commerce + Carbon Passport</p></div>
-          <div class="tier"><div class="tier-accent brand-dark"></div><h3>Enterprise</h3><span class="tier-price">$95+/mois</span><p data-field="s11_tier3">Cabinets comptables + API & white-label</p></div>
+          <div class="tier"><div class="tier-accent muted"></div><h3>Starter</h3><span class="tier-price">$20/mois</span><p data-field="s11_tier1" contenteditable="false">Freelancers &amp; auto-entrepreneurs</p></div>
+          <div class="tier"><div class="tier-accent brand"></div><h3>Pro</h3><span class="tier-price">$42–62/mois</span><p data-field="s11_tier2" contenteditable="false">PME &amp; e-commerce + Carbon Passport</p></div>
+          <div class="tier"><div class="tier-accent brand-dark"></div><h3>Enterprise</h3><span class="tier-price">$95+/mois</span><p data-field="s11_tier3" contenteditable="false">Cabinets comptables + API &amp; white-label</p></div>
         </div>
       </div>
-      <div class="slide-footer">11/22</div>
+      <div class="slide-footer">12/23</div>
     </div>
-    <div class="slide light-slide" data-slide="12">
+    <div class="slide light-slide" data-slide="13" style="">
       <div class="slide-inner">
         <div class="accent-bar brand"></div>
-        <h2 class="slide-title" data-field="s12_title">Stratégie GTM & Carbon Academy</h2>
-        <p class="slide-subtitle" data-field="s12_subtitle">Acquisition multi-canal et formation comme levier de croissance</p>
+        <h2 class="slide-title" data-field="s12_title" contenteditable="false">Stratégie GTM (Go to Market)</h2>
+        <p class="slide-subtitle" data-field="s12_subtitle" contenteditable="false">Acquisition multi-canal et formation comme levier de croissance</p>
         <div class="two-col equal">
-          <div class="detail-card brand-dark-accent"><h3 data-field="s12_left_title">Acquisition Payante (55%)</h3>
-            <ul><li data-field="s12_l_l1">Google Search + Performance Max</li><li data-field="s12_l_l2">LinkedIn Ads ciblant comptables et CFO</li><li data-field="s12_l_l3">Retargeting et nurturing email</li><li data-field="s12_l_l4">CAC cible < $150 avec LTV:CAC > 9x</li></ul>
+          <div class="detail-card brand-dark-accent"><h3 data-field="s12_left_title" contenteditable="false">Acquisition Payante (55%)</h3>
+            <ul><li data-field="s12_l_l1" contenteditable="false">&nbsp; &nbsp;Google Search + Performance Max</li><li data-field="s12_l_l2" contenteditable="false">&nbsp; &nbsp;LinkedIn Ads ciblant comptables et CFO</li><li data-field="s12_l_l3" contenteditable="false">&nbsp; &nbsp;Retargeting et nurturing email</li><li data-field="s12_l_l4" contenteditable="false">&nbsp; &nbsp;CAC cible &lt; $150 avec LTV:CAC &gt; 9x</li></ul>
           </div>
-          <div class="detail-card brand-accent"><h3 data-field="s12_right_title">Croissance Organique (45%)</h3>
-            <ul><li data-field="s12_r_l1">SEO contenu (blog comptabilité & carbone)</li><li data-field="s12_r_l2">Programme de referral (crédits)</li><li data-field="s12_r_l3">Partenariats cabinets comptables</li><li data-field="s12_r_l4">Communauté et évangélisation CBAM</li></ul>
+          <div class="detail-card brand-accent"><h3 data-field="s12_right_title" contenteditable="false">Croissance Organique (45%)</h3>
+            <ul><li data-field="s12_r_l1" contenteditable="false">&nbsp; &nbsp;SEO contenu (blog comptabilité &amp; carbone)</li><li data-field="s12_r_l2" contenteditable="false">&nbsp; &nbsp;Programme de referral (crédits)</li><li data-field="s12_r_l3" contenteditable="false">&nbsp; &nbsp;Partenariats (cabinets comptables, blogs...)</li><li data-field="s12_r_l4" contenteditable="false">&nbsp; &nbsp;Communauté et évangélisation CBAM</li></ul>
           </div>
         </div>
         <div class="academy-box">
-          <h3 data-field="s12_academy_title">🎓 CloudCFO Carbon Academy</h3>
-          <ul><li data-field="s12_a_l1">Cours en ligne : comptabilité carbone & Carbon Passport</li><li data-field="s12_a_l2">Certifications : « CloudCFO Certified Carbon Accountant » & « Certified Bookkeeper »</li><li data-field="s12_a_l3">Webinaires CBAM — aligné avec l'objectif national de 100 000 jeunes formés au digital</li></ul>
+          <h3 data-field="s12_academy_title" contenteditable="false">🎓 CloudCFO Carbon Academy</h3>
+          <ul><li data-field="s12_a_l1" contenteditable="false">&nbsp; &nbsp;Cours en ligne : comptabilité carbone &amp; Carbon Passport</li><li data-field="s12_a_l2" contenteditable="false">&nbsp; &nbsp;Certifications : « CloudCFO Certified Carbon Accountant »&nbsp;</li><li data-field="s12_a_l3" contenteditable="false">&nbsp; &nbsp;Webinaires CBAM — aligné avec l'objectif national de 100 000 jeunes formés au digital</li></ul>
         </div>
       </div>
-      <div class="slide-footer">12/22</div>
+      <div class="slide-footer">13/23</div>
     </div>
-    <div class="slide light-slide" data-slide="13">
+    <div class="slide light-slide" data-slide="14" style="">
       <div class="slide-inner">
         <div class="accent-bar brand-dark"></div>
-        <h2 class="slide-title" data-field="s13_title">Roadmap Produit</h2>
-        <p class="slide-subtitle" data-field="s13_subtitle">18 mois pour atteindre le product-market fit et l'échelle</p>
+        <h2 class="slide-title" data-field="s13_title" contenteditable="false">Roadmap Produit</h2>
+        <p class="slide-subtitle" data-field="s13_subtitle" contenteditable="false">9 mois, pour lancer le 1er produit centré sur 1 niche - 18 mois pour atteindre le product-market fit et l'échelle</p>
         <div class="roadmap">
-          <div class="phase"><div class="phase-header brand-dark-bg"><strong>M1–3</strong><br>MVP</div><ul><li data-field="s13_p1_l1">Core extraction IA</li><li data-field="s13_p1_l2">Intégrations OAuth</li><li data-field="s13_p1_l3">Dashboard v1</li><li data-field="s13_p1_l4">Web Frontend</li></ul></div>
+          <div class="phase"><div class="phase-header brand-dark-bg"><strong>M1–3</strong><br>MVP</div><ul><li data-field="s13_p1_l1" contenteditable="false">Core extraction IA</li><li data-field="s13_p1_l2" contenteditable="false">Intégrations OAuth</li><li data-field="s13_p1_l3" contenteditable="false">Dashboard v1</li><li data-field="s13_p1_l4" contenteditable="false">Web Frontend</li></ul></div>
           <div class="phase-arrow">→</div>
-          <div class="phase"><div class="phase-header brand-bg"><strong>M4–9</strong><br>Lancement PMEs</div><ul><li data-field="s13_p2_l1">Carbon Passport v1</li><li data-field="s13_p2_l2">Onboarding zéro-touch</li><li data-field="s13_p2_l3">QuickBooks/CLIMATIQ sync</li><li data-field="s13_p2_l4">Beta publique</li><li data-field="s13_p2_l5">HITL pipeline</li></ul></div>
+          <div class="phase"><div class="phase-header brand-bg"><strong>M4–9</strong><br>Lancement PMEs</div><ul><li data-field="s13_p2_l1" contenteditable="false">Carbon Passport v1</li><li data-field="s13_p2_l2" contenteditable="false">Onboarding zéro-touch</li><li data-field="s13_p2_l3" contenteditable="false">QuickBooks/CLIMATIQ sync</li><li data-field="s13_p2_l4" contenteditable="false">Beta publique</li><li data-field="s13_p2_l5" contenteditable="false">HITL pipeline</li></ul></div>
           <div class="phase-arrow">→</div>
-          <div class="phase"><div class="phase-header accent-gold-bg"><strong>M9–18</strong><br>Scale</div><ul><li data-field="s13_p3_l1">Carbon Academy</li><li data-field="s13_p3_l2">Additional OAuth Intégrations</li><li data-field="s13_p3_l3">Android/iOS Frontend</li><li data-field="s13_p3_l4">Expansion Freelanceurs</li><li data-field="s13_p3_l5">Expansion marchés UE</li><li data-field="s13_p3_l6">10K utilisateurs</li></ul></div>
+          <div class="phase"><div class="phase-header accent-gold-bg"><strong>M9–18</strong><br>Scale</div><ul><li data-field="s13_p3_l1" contenteditable="false">Carbon Academy</li><li data-field="s13_p3_l2" contenteditable="false">Additional OAuth Intégrations</li><li data-field="s13_p3_l3" contenteditable="false">Android/iOS Frontend</li><li data-field="s13_p3_l4" contenteditable="false">Expansion Freelanceurs</li><li data-field="s13_p3_l5" contenteditable="false">Expansion marchés UE</li><li data-field="s13_p3_l6" contenteditable="false">10K utilisateurs</li></ul></div>
           <div class="phase-arrow">→</div>
-          <div class="phase"><div class="phase-header brand-dark-bg"><strong>M18–24</strong><br>Enterprise</div><ul><li data-field="s13_p4_l1">Multi-entités</li><li data-field="s13_p4_l2">Prévisions IA</li><li data-field="s13_p4_l3">Service Comptables (API & white-label)</li><li data-field="s13_p4_l4">Partenariats stratégiques</li><li data-field="s13_p4_l5">Préparation Série A</li></ul></div>
+          <div class="phase"><div class="phase-header brand-dark-bg"><strong>M18–24</strong><br>Enterprise</div><ul><li data-field="s13_p4_l1" contenteditable="false">Multi-entités</li><li data-field="s13_p4_l2" contenteditable="false">Prévisions IA</li><li data-field="s13_p4_l3" contenteditable="false">Service Comptables (API &amp; white-label)</li><li data-field="s13_p4_l4" contenteditable="false">Partenariats stratégiques</li><li data-field="s13_p4_l5" contenteditable="false">Préparation Série A</li></ul></div>
         </div>
       </div>
-      <div class="slide-footer">13/22</div>
+      <div class="slide-footer">14/23</div>
     </div>
-    <div class="slide light-slide" data-slide="14">
+    <div class="slide light-slide" data-slide="15" style="">
       <div class="slide-inner">
         <div class="accent-bar accent-gold"></div>
-        <h2 class="slide-title" data-field="s14_title">Projections Financières</h2>
-        <p class="slide-subtitle" data-field="s14_subtitle">Trajectoire vers $7M pARR avec des unit economics saines</p>
+        <h2 class="slide-title" data-field="s14_title" contenteditable="false">Projections Financières</h2>
+        <p class="slide-subtitle" data-field="s14_subtitle" contenteditable="false">Trajectoire vers $7M pARR avec des unit economics saines</p>
         <div class="fin-dual">
           <div class="fin-block"><h3>18 mois</h3>
             <div class="fin-grid">
@@ -693,164 +914,164 @@ h1,h2,h3,.font-heading{font-family:'Georgia',serif}
             </div>
           </div>
         </div>
-        <div class="fin-metrics"><span><strong><$150</strong> CAC</span><span><strong>>$1 500</strong> LTV</span><span><strong><5%</strong> Churn</span><span><strong>>9x</strong> LTV:CAC</span></div>
-        <div class="milestones"><h3 data-field="s14_miles_title">Jalons de Croissance</h3>
-          <ul><li data-field="s14_m1">M3 : MVP en production</li><li data-field="s14_m2">M6 : 1 000 utilisateurs</li><li data-field="s14_m3">M9 : Carbon Passport lancé</li><li data-field="s14_m4">M10 : $85K MRR ($1M pARR)</li><li data-field="s14_m5">M18 : $485K MRR ($6M+ pARR)</li></ul>
+        <div class="fin-metrics"><span><strong>&lt;$150</strong> CAC</span><span><strong>&gt;$1 500</strong> LTV</span><span><strong>&lt;5%</strong> Churn</span><span><strong>&gt;9x</strong> LTV:CAC</span></div>
+        <div class="milestones"><h3 data-field="s14_miles_title" contenteditable="false">Jalons de Croissance</h3>
+          <ul><li data-field="s14_m1" contenteditable="false">M3 : MVP en production</li><li data-field="s14_m2" contenteditable="false">M6 : 1 000 utilisateurs</li><li data-field="s14_m3" contenteditable="false">M9 : Carbon Passport lancé</li><li data-field="s14_m4" contenteditable="false">M10 : $85K MRR ($1M pARR)</li><li data-field="s14_m5" contenteditable="false">M18 : $485K MRR ($6M+ pARR)</li></ul>
         </div>
       </div>
-      <div class="slide-footer">14/22</div>
+      <div class="slide-footer">15/23</div>
     </div>
-    <div class="slide light-slide" data-slide="15">
+    <div class="slide light-slide" data-slide="16" style="">
       <div class="slide-inner">
         <div class="accent-bar accent-gold"></div>
-        <h2 class="slide-title" data-field="s15_title">Création de Valeur & Valorisation à 5 Ans</h2>
-        <p class="slide-subtitle" data-field="s15_subtitle">Trajectoire vers le statut de première licorne marocaine de l'intelligence financière</p>
+        <h2 class="slide-title" data-field="s15_title" contenteditable="false">Création de Valeur &amp; Valorisation à 5 Ans</h2>
+        <p class="slide-subtitle" data-field="s15_subtitle" contenteditable="false">Trajectoire vers le statut de première licorne marocaine de l'intelligence financière</p>
         <div class="val-kpis">
           <div class="val-kpi brand-dark-bg"><span class="val-num">150K</span><span>utilisateurs actifs à 5 ans</span></div>
-          <div class="val-kpi brand-bg"><span class="val-num">$150M+</span><span>ARR run rate · Churn < 4%</span></div>
+          <div class="val-kpi brand-bg"><span class="val-num">$150M+</span><span>ARR run rate · Churn &lt; 4%</span></div>
         </div>
         <table class="exit-table"><thead><tr><th>Scénario</th><th>Acquéreur type</th><th>Multiple</th><th>Valorisation</th></tr></thead>
         <tbody>
-          <tr><td data-field="s15_t_r1c0"><strong>Acquisition stratégique</strong></td><td data-field="s15_t_r1c1">Intuit, Xero, Sage, Stripe, Brex</td><td>10–15x ARR</td><td class="brand-text bold">$1,5B – $2,25B</td></tr>
-          <tr><td data-field="s15_t_r2c0"><strong>Rollup Private Equity</strong></td><td data-field="s15_t_r2c1">Vista Equity, Thoma Bravo</td><td>8–12x ARR</td><td>$1,2B – $1,8B</td></tr>
-          <tr><td data-field="s15_t_r3c0"><strong>IPO</strong></td><td data-field="s15_t_r3c1">NASDAQ ou Bourse Casablanca</td><td>15–25x ARR</td><td class="accent-gold-text bold">$2,25B – $3,75B</td></tr>
+          <tr><td data-field="s15_t_r1c0" contenteditable="false"><strong>Acquisition stratégique</strong></td><td data-field="s15_t_r1c1" contenteditable="false">Intuit, Xero, Sage, Stripe, Brex</td><td>10–15x ARR</td><td class="brand-text bold">$1,5B – $2,25B</td></tr>
+          <tr><td data-field="s15_t_r2c0" contenteditable="false"><strong>Rollup Private Equity</strong></td><td data-field="s15_t_r2c1" contenteditable="false">Vista Equity, Thoma Bravo</td><td>8–12x ARR</td><td>$1,2B – $1,8B</td></tr>
+          <tr><td data-field="s15_t_r3c0" contenteditable="false"><strong>IPO</strong></td><td data-field="s15_t_r3c1" contenteditable="false">NASDAQ ou Bourse Casablanca</td><td>15–25x ARR</td><td class="accent-gold-text bold">$2,25B – $3,75B</td></tr>
         </tbody></table>
-        <div class="metrics-bar brand-dark-bg" data-field="s15_bottom">Trajectoire vers le statut de première licorne marocaine de l'intelligence financière</div>
+        <div class="metrics-bar brand-dark-bg" data-field="s15_bottom" contenteditable="false">Trajectoire vers le statut de première licorne marocaine de l'intelligence financière</div>
       </div>
-      <div class="slide-footer">15/22</div>
+      <div class="slide-footer">16/23</div>
     </div>
-    <div class="slide light-slide" data-slide="16">
+    <div class="slide light-slide" data-slide="17" style="">
       <div class="slide-inner">
         <div class="accent-bar brand"></div>
-        <h2 class="slide-title" data-field="s16_title">L'Équipe</h2>
-        <p class="slide-subtitle" data-field="s16_subtitle">Plan de recrutement : objectif 12 personnes sur 12 mois</p>
+        <h2 class="slide-title" data-field="s16_title" contenteditable="false">L'Équipe</h2>
+        <p class="slide-subtitle" data-field="s16_subtitle" contenteditable="false">Plan de recrutement : objectif 12 personnes sur 12 mois</p>
         <div class="team-grid">
-          <div class="team-card"><div class="card-accent brand-dark"></div><span class="team-icon">🤖</span><h3 data-field="s16_r1_title">IA / ML — 2 personnes</h3><p data-field="s16_r1_desc">Ingénieurs extraction, NLP, vision</p></div>
-          <div class="team-card"><div class="card-accent brand"></div><span class="team-icon">💻</span><h3 data-field="s16_r2_title">Produit & Frontend — 1 personne</h3><p data-field="s16_r2_desc">UX/UI, React, dashboards</p></div>
-          <div class="team-card"><div class="card-accent accent-gold"></div><span class="team-icon">⚙️</span><h3 data-field="s16_r3_title">Opérations HITL — 4 personnes</h3><p data-field="s16_r3_desc">Qualité données, validation, formation</p></div>
-          <div class="team-card"><div class="card-accent brand-dark"></div><span class="team-icon">💰</span><h3 data-field="s16_r4_title">Finance & Domaine — 2 personnes</h3><p data-field="s16_r4_desc">Expertise comptable, carbone, conformité</p></div>
-          <div class="team-card"><div class="card-accent brand"></div><span class="team-icon">📢</span><h3 data-field="s16_r5_title">Croissance GTM — 2 personnes</h3><p data-field="s16_r5_desc">Marketing, ventes, partenariats</p></div>
-          <div class="team-card"><div class="card-accent accent-gold"></div><span class="team-icon">🖥️</span><h3 data-field="s16_r6_title">Infrastructure — 1 personne</h3><p data-field="s16_r6_desc">DevOps, sécurité, scalabilité</p></div>
+          <div class="team-card"><div class="card-accent brand-dark"></div><span class="team-icon">🤖</span><h3 data-field="s16_r1_title" contenteditable="false">IA / ML — 2 personnes</h3><p data-field="s16_r1_desc" contenteditable="false">Ingénieurs extraction, NLP, vision</p></div>
+          <div class="team-card"><div class="card-accent brand"></div><span class="team-icon">💻</span><h3 data-field="s16_r2_title" contenteditable="false">Produit &amp; Frontend — 1 personne</h3><p data-field="s16_r2_desc" contenteditable="false">UX/UI, React, dashboards</p></div>
+          <div class="team-card"><div class="card-accent accent-gold"></div><span class="team-icon">⚙️</span><h3 data-field="s16_r3_title" contenteditable="false">Opérations HITL — 4 personnes</h3><p data-field="s16_r3_desc" contenteditable="false">Qualité données, validation, formation</p></div>
+          <div class="team-card"><div class="card-accent brand-dark"></div><span class="team-icon">💰</span><h3 data-field="s16_r4_title" contenteditable="false">Finance &amp; Domaine — 2 personnes</h3><p data-field="s16_r4_desc" contenteditable="false">Expertise comptable, carbone, conformité</p></div>
+          <div class="team-card"><div class="card-accent brand"></div><span class="team-icon">📢</span><h3 data-field="s16_r5_title" contenteditable="false">Croissance GTM — 2 personnes</h3><p data-field="s16_r5_desc" contenteditable="false">Marketing, ventes, partenariats</p></div>
+          <div class="team-card"><div class="card-accent accent-gold"></div><span class="team-icon">🖥️</span><h3 data-field="s16_r6_title" contenteditable="false">Infrastructure — 1 personne</h3><p data-field="s16_r6_desc" contenteditable="false">DevOps, sécurité, scalabilité</p></div>
         </div>
-        <div class="metrics-bar brand-bg" data-field="s16_bottom">Recrutement local au Maroc = création d'emplois tech qualifiés alignée avec Maroc Digital 2030</div>
+        <div class="metrics-bar brand-bg" data-field="s16_bottom" contenteditable="false">Recrutement local au Maroc = création d'emplois tech qualifiés alignée avec Maroc Digital 2030</div>
       </div>
-      <div class="slide-footer">16/22</div>
+      <div class="slide-footer">17/23</div>
     </div>
-    <div class="slide dark-slide" data-slide="17">
+    <div class="slide dark-slide" data-slide="18" style="">
       <div class="slide-inner">
         <div class="accent-bar brand"></div>
-        <h2 class="slide-title brand" data-field="s17_title">Architecture Technique</h2>
-        <p class="slide-subtitle light" data-field="s17_subtitle">7 couches d'intelligence — API-first, modulaire, scalable</p>
+        <h2 class="slide-title brand" data-field="s17_title" contenteditable="false">Architecture Technique</h2>
+        <p class="slide-subtitle light" data-field="s17_subtitle" contenteditable="false">7 couches d'intelligence — API-first, modulaire, scalable</p>
         <div class="arch-layers">
           <div class="arch-layer l1"><strong>AutoDiscovery</strong><span>Gmail, Drive, Outlook, OneDrive, WhatsApp, Plaid</span></div>
           <div class="arch-layer l2"><strong>Data Qualification</strong><span>Détection type, langue, qualité, routing</span></div>
-          <div class="arch-layer l3"><strong>Vision & Structuring</strong><span>IBM Docling, OCR avancé, extraction layout</span></div>
+          <div class="arch-layer l3"><strong>Vision &amp; Structuring</strong><span>IBM Docling, OCR avancé, extraction layout</span></div>
           <div class="arch-layer l4"><strong>Extraction Engine</strong><span>LangChain RAG, NLP, classification intelligente</span></div>
           <div class="arch-layer l5"><strong>Learning Loops</strong><span>HITL feedback, auto-apprentissage, base de connaissances</span></div>
           <div class="arch-layer l6"><strong>Output Engines</strong><span>QuickBooks, Xero sync + Carbon Passport via Climatiq</span></div>
           <div class="arch-layer l7"><strong>Intelligence Engine</strong><span>Prévisions, benchmarks, alertes, recommandations IA</span></div>
         </div>
-        <p class="arch-footer" data-field="s17_footer">API-first | Modulaire | Merlin Technologies (Maroc) SARL</p>
+        <p class="arch-footer" data-field="s17_footer" contenteditable="false">API-first | Modulaire | Merlin Technologies (Maroc) SARL</p>
       </div>
-      <div class="slide-footer dark">17/22</div>
+      <div class="slide-footer dark">18/23</div>
     </div>
-    <div class="slide light-slide" data-slide="18">
+    <div class="slide light-slide" data-slide="19" style="">
       <div class="slide-inner">
         <div class="accent-bar brand"></div>
-        <h2 class="slide-title" data-field="s18_title">Sécurité & Conformité Réglementaire</h2>
-        <p class="slide-subtitle" data-field="s18_subtitle">Enterprise-ready : conforme aux réglementations marocaines et européennes</p>
+        <h2 class="slide-title" data-field="s18_title" contenteditable="false">Sécurité &amp; Conformité Réglementaire</h2>
+        <p class="slide-subtitle" data-field="s18_subtitle" contenteditable="false">Enterprise-ready : conforme aux réglementations marocaines et européennes</p>
         <div class="sec-grid">
-          <div class="sec-card"><span>🛡️</span><h3 data-field="s18_c1_title">RGPD / GDPR</h3><p data-field="s18_c1_desc">Conformité européenne complète : consentement, effacement, portabilité</p></div>
-          <div class="sec-card"><span>🇲🇦</span><h3 data-field="s18_c2_title">Loi 09-08 Maroc</h3><p data-field="s18_c2_desc">Conformité loi marocaine protection des données. Déclaration CNDP</p></div>
-          <div class="sec-card"><span>🔒</span><h3 data-field="s18_c3_title">Chiffrement</h3><p data-field="s18_c3_desc">AES-256 au repos, TLS 1.3 en transit, Zero-knowledge</p></div>
-          <div class="sec-card"><span>☁️</span><h3 data-field="s18_c4_title">Hébergement</h3><p data-field="s18_c4_desc">Infrastructure cloud certifiée (AWS/GCP). Résidence données EU/MA</p></div>
-          <div class="sec-card"><span>🔑</span><h3 data-field="s18_c5_title">Contrôle d'Accès</h3><p data-field="s18_c5_desc">OAuth 2.0, MFA. Gestion granulaire rôles et permissions</p></div>
-          <div class="sec-card"><span>👁️</span><h3 data-field="s18_c6_title">Piste d'Audit</h3><p data-field="s18_c6_desc">Traçabilité complète. Historique immuable. Conformité comptable</p></div>
-          <div class="sec-card"><span>📋</span><h3 data-field="s18_c7_title">SOC 2 Type II</h3><p data-field="s18_c7_desc">En préparation. Normes IFRS / US GAAP. Conformité ESG (CSRD)</p></div>
-          <div class="sec-card"><span>🗄️</span><h3 data-field="s18_c8_title">Isolation Données</h3><p data-field="s18_c8_desc">Multi-tenant strict. Isolation logique par client. Zéro partage inter-clients</p></div>
+          <div class="sec-card"><span>🛡️</span><h3 data-field="s18_c1_title" contenteditable="false">RGPD / GDPR</h3><p data-field="s18_c1_desc" contenteditable="false">Conformité européenne complète : consentement, effacement, portabilité</p></div>
+          <div class="sec-card"><span>🇲🇦</span><h3 data-field="s18_c2_title" contenteditable="false">Loi 09-08 Maroc</h3><p data-field="s18_c2_desc" contenteditable="false">Conformité loi marocaine protection des données. Déclaration CNDP</p></div>
+          <div class="sec-card"><span>🔒</span><h3 data-field="s18_c3_title" contenteditable="false">Chiffrement</h3><p data-field="s18_c3_desc" contenteditable="false">AES-256 au repos, TLS 1.3 en transit, Zero-knowledge</p></div>
+          <div class="sec-card"><span>☁️</span><h3 data-field="s18_c4_title" contenteditable="false">Hébergement</h3><p data-field="s18_c4_desc" contenteditable="false">Infrastructure cloud certifiée (AWS/GCP). Résidence données EU/MA</p></div>
+          <div class="sec-card"><span>🔑</span><h3 data-field="s18_c5_title" contenteditable="false">Contrôle d'Accès</h3><p data-field="s18_c5_desc" contenteditable="false">OAuth 2.0, MFA. Gestion granulaire rôles et permissions</p></div>
+          <div class="sec-card"><span>👁️</span><h3 data-field="s18_c6_title" contenteditable="false">Piste d'Audit</h3><p data-field="s18_c6_desc" contenteditable="false">Traçabilité complète. Historique immuable. Conformité comptable</p></div>
+          <div class="sec-card"><span>📋</span><h3 data-field="s18_c7_title" contenteditable="false">SOC 2 Type II</h3><p data-field="s18_c7_desc" contenteditable="false">En préparation. Normes IFRS / US GAAP. Conformité ESG (CSRD)</p></div>
+          <div class="sec-card"><span>🗄️</span><h3 data-field="s18_c8_title" contenteditable="false">Isolation Données</h3><p data-field="s18_c8_desc" contenteditable="false">Multi-tenant strict. Isolation logique par client. Zéro partage inter-clients</p></div>
         </div>
       </div>
-      <div class="slide-footer">18/22</div>
+      <div class="slide-footer">19/23</div>
     </div>
-    <div class="slide light-slide" data-slide="19">
+    <div class="slide light-slide" data-slide="20" style="">
       <div class="slide-inner">
         <div class="accent-bar" style="background:#C0392B"></div>
-        <h2 class="slide-title" data-field="s19_title">Alignement Maroc Digital 2030</h2>
-        <p class="slide-subtitle" data-field="s19_subtitle">CloudCFO coche chaque case de la stratégie nationale</p>
+        <h2 class="slide-title" data-field="s19_title" contenteditable="false">Alignement Maroc Digital 2030</h2>
+        <p class="slide-subtitle" data-field="s19_subtitle" contenteditable="false">CloudCFO coche chaque case de la stratégie nationale</p>
         <div class="align-grid">
-          <div class="align-item"><span class="check">✓</span><span data-field="s19_a1">IA au cœur : extraction et intelligence automatisées</span></div>
-          <div class="align-item"><span class="check">✓</span><span data-field="s19_a2">FinTech + GreenTech : double positionnement stratégique</span></div>
-          <div class="align-item"><span class="check">✓</span><span data-field="s19_a3">Facturation Digitale 2026 : pipeline natif</span></div>
-          <div class="align-item"><span class="check">✓</span><span data-field="s19_a4">Carbon Passport 2027 : conformité CBAM automatique</span></div>
-          <div class="align-item"><span class="check">✓</span><span data-field="s19_a5">Carbon Academy : formation 100K jeunes au digital</span></div>
-          <div class="align-item"><span class="check">✓</span><span data-field="s19_a6">Emplois tech qualifiés : 12 recrutements au Maroc</span></div>
-          <div class="align-item"><span class="check">✓</span><span data-field="s19_a7">Exportation numérique : cible NA 65%, UE 25%</span></div>
-          <div class="align-item"><span class="check">✓</span><span data-field="s19_a8">Hub africain : porte d'entrée continent via Maroc</span></div>
-          <div class="align-item"><span class="check">✓</span><span data-field="s19_a9">Mission service public : chaque PME intelligente</span></div>
-          <div class="align-item"><span class="check">✓</span><span data-field="s19_a10">Startup à Gazelle : trajectoire licorne marocaine</span></div>
-          <div class="align-item"><span class="check">✓</span><span data-field="s19_a11">Autofinancement prouvé : 100% fondateur à ce jour</span></div>
-          <div class="align-item"><span class="check">✓</span><span data-field="s19_a12">Coupe du Monde 2030 : conformité pour écosystème</span></div>
+          <div class="align-item"><span class="check">✓</span><span data-field="s19_a1" contenteditable="false">IA au cœur : extraction et intelligence automatisées</span></div>
+          <div class="align-item"><span class="check">✓</span><span data-field="s19_a2" contenteditable="false">FinTech + GreenTech : double positionnement stratégique</span></div>
+          <div class="align-item"><span class="check">✓</span><span data-field="s19_a3" contenteditable="false">Facturation Digitale 2026 : pipeline natif</span></div>
+          <div class="align-item"><span class="check">✓</span><span data-field="s19_a4" contenteditable="false">Carbon Passport 2027 : conformité CBAM automatique</span></div>
+          <div class="align-item"><span class="check">✓</span><span data-field="s19_a5" contenteditable="false">Carbon Academy : formation 100K jeunes au digital</span></div>
+          <div class="align-item"><span class="check">✓</span><span data-field="s19_a6" contenteditable="false">Emplois tech qualifiés : 12 recrutements au Maroc</span></div>
+          <div class="align-item"><span class="check">✓</span><span data-field="s19_a7" contenteditable="false">Exportation numérique : cible NA 65%, UE 25%</span></div>
+          <div class="align-item"><span class="check">✓</span><span data-field="s19_a8" contenteditable="false">Hub africain : porte d'entrée continent via Maroc</span></div>
+          <div class="align-item"><span class="check">✓</span><span data-field="s19_a9" contenteditable="false">Mission service public : chaque PME intelligente</span></div>
+          <div class="align-item"><span class="check">✓</span><span data-field="s19_a10" contenteditable="false">Startup à Gazelle : trajectoire licorne marocaine</span></div>
+          <div class="align-item"><span class="check">✓</span><span data-field="s19_a11" contenteditable="false">Autofinancement prouvé : 100% fondateur à ce jour</span></div>
+          <div class="align-item"><span class="check">✓</span><span data-field="s19_a12" contenteditable="false">Coupe du Monde 2030 : conformité pour écosystème</span></div>
         </div>
       </div>
-      <div class="slide-footer">19/22</div>
+      <div class="slide-footer">20/23</div>
     </div>
-    <div class="slide light-slide" data-slide="20">
+    <div class="slide light-slide" data-slide="21" style="">
       <div class="slide-inner">
         <div class="accent-bar brand-dark"></div>
-        <h2 class="slide-title" data-field="s20_title">La Demande : Subvention Innov Invest</h2>
-        <p class="slide-subtitle" data-field="s20_subtitle">Financement ciblé pour atteindre le product-market fit</p>
+        <h2 class="slide-title" data-field="s20_title" contenteditable="false">La Demande : Subvention Innov Invest</h2>
+        <p class="slide-subtitle" data-field="s20_subtitle" contenteditable="false">Financement ciblé pour atteindre le product-market fit</p>
         <div class="funding-layout">
           <div class="fund-main">
-            <div class="fund-amount brand-dark-bg"><span class="fund-num" data-field="s20_amount">400 000</span><span data-field="s20_type">MAD — Subvention Tech Start</span></div>
-            <div class="fund-self" data-field="s20_self">+ 20% autofinancement fondateur (couvert)</div>
+            <div class="fund-amount brand-dark-bg"><span class="fund-num" data-field="s20_amount" contenteditable="false">400 000</span><span data-field="s20_type" contenteditable="false">MAD — Subvention Tech Start</span></div>
+            <div class="fund-self" data-field="s20_self" contenteditable="false">+ 20% autofinancement fondateur (couvert)</div>
           </div>
           <div class="fund-alloc">
-            <div class="alloc-item"><strong>Produit & IA</strong><span class="alloc-amount">160K MAD</span><p data-field="s20_a1_desc">Extraction, Carbon Passport, dashboards</p></div>
-            <div class="alloc-item"><strong>GTM</strong><span class="alloc-amount">120K MAD</span><p data-field="s20_a2_desc">Acquisition, contenu, partenariats</p></div>
-            <div class="alloc-item"><strong>HITL</strong><span class="alloc-amount">40K MAD</span><p data-field="s20_a3_desc">Équipe validation et qualité</p></div>
-            <div class="alloc-item"><strong>Infrastructure</strong><span class="alloc-amount">40K MAD</span><p data-field="s20_a4_desc">Cloud, sécurité, monitoring</p></div>
-            <div class="alloc-item"><strong>PI & Juridique</strong><span class="alloc-amount">40K MAD</span><p data-field="s20_a5_desc">Marques, brevets, conformité</p></div>
+            <div class="alloc-item"><strong>Produit &amp; IA</strong><span class="alloc-amount">160K MAD</span><p data-field="s20_a1_desc" contenteditable="false">Process Autodiscovery - Ajout de nouvelles integration OAuth<br>Integration à des moteurs Compta supplémentaires<br>Upgrade Infra de la solution AI de Data Extraction, qualification<br>Développement de l'APP CloudCFO Mobile - avec la fonction Capture de Notifications<br>Upgrade vers des Dashboards personnalisables</p></div>
+            <div class="alloc-item"><strong>GTM</strong><span class="alloc-amount">120K MAD</span><p data-field="s20_a2_desc" contenteditable="false">Acquisition, <br>contenu, <br>Partenariats</p></div>
+            <div class="alloc-item"><strong>HITL</strong><span class="alloc-amount">40K MAD</span><p data-field="s20_a3_desc" contenteditable="false">Équipe validation et qualité</p></div>
+            <div class="alloc-item"><strong>Infrastructure</strong><span class="alloc-amount">40K MAD</span><p data-field="s20_a4_desc" contenteditable="false">Cloud, sécurité, monitoring</p></div>
+            <div class="alloc-item"><strong>PI &amp; Juridique</strong><span class="alloc-amount">40K MAD</span><p data-field="s20_a5_desc" contenteditable="false">Marques, brevets, conformité</p></div>
           </div>
         </div>
-        <div class="quote-bar" data-field="s20_warning">Aucune levée de fonds externe n'est sollicitée — 100% autofinancé par le fondateur à ce jour</div>
+        <div class="quote-bar" data-field="s20_warning" contenteditable="false">A aujourd'hui, l'investissement réalisé s'élève à 150.000 Dhs<br>Aucune levée de fonds externe n'a été sollicitée , à ce jour— 100% autofinancé par le fondateur&nbsp;</div>
       </div>
-      <div class="slide-footer">20/22</div>
+      <div class="slide-footer">21/23</div>
     </div>
-    <div class="slide light-slide" data-slide="21">
+    <div class="slide light-slide" data-slide="22" style="">
       <div class="slide-inner">
         <div class="accent-bar accent-gold"></div>
-        <h2 class="slide-title" data-field="s21_title">Pourquoi Maintenant ?</h2>
-        <p class="slide-subtitle" data-field="s21_subtitle">Six forces convergentes créent une fenêtre d'opportunité unique</p>
+        <h2 class="slide-title" data-field="s21_title" contenteditable="false">Pourquoi Maintenant ?</h2>
+        <p class="slide-subtitle" data-field="s21_subtitle" contenteditable="false">Six forces convergentes créent une fenêtre d'opportunité unique</p>
         <div class="reasons-grid">
-          <div class="reason brand-dark-top"><h3 data-field="s21_r1_title">📜 Facturation 2026</h3><p data-field="s21_r1_desc">Obligation légale imminente crée un marché captif</p></div>
-          <div class="reason brand-top"><h3 data-field="s21_r2_title">🌿 Carbon Passport 2027</h3><p data-field="s21_r2_desc">CBAM en vigueur, urgence pour les PME marocaines exportatrices</p></div>
-          <div class="reason accent-gold-top"><h3 data-field="s21_r3_title">⚡ Inflexion Techno</h3><p data-field="s21_r3_desc">IA générative mature, coûts en chute libre</p></div>
-          <div class="reason brand-dark-top"><h3 data-field="s21_r4_title">🎯 Gap Concurrentiel</h3><p data-field="s21_r4_desc">Aucune solution intégrée comptabilité + carbone</p></div>
-          <div class="reason brand-top"><h3 data-field="s21_r5_title">🧠 Avantage Auto-Renforçant</h3><p data-field="s21_r5_desc">Chaque document traité améliore le système</p></div>
-          <div class="reason accent-gold-top"><h3 data-field="s21_r6_title">🌍 Timing Maroc</h3><p data-field="s21_r6_desc">Maroc Digital 2030 + Coupe du Monde Maroc 2030</p></div>
+          <div class="reason brand-dark-top"><h3 data-field="s21_r1_title" contenteditable="false">📜 Facturation 2026</h3><p data-field="s21_r1_desc" contenteditable="false">Obligation légale imminente crée un marché captif</p></div>
+          <div class="reason brand-top"><h3 data-field="s21_r2_title" contenteditable="false">🌿 Carbon Passport 2027</h3><p data-field="s21_r2_desc" contenteditable="false">CBAM en vigueur, urgence pour les PME marocaines exportatrices</p></div>
+          <div class="reason accent-gold-top"><h3 data-field="s21_r3_title" contenteditable="false">⚡ Inflexion Techno</h3><p data-field="s21_r3_desc" contenteditable="false">IA générative mature, coûts en chute libre</p></div>
+          <div class="reason brand-dark-top"><h3 data-field="s21_r4_title" contenteditable="false">🎯 Gap Concurrentiel</h3><p data-field="s21_r4_desc" contenteditable="false">Aucune solution intégrée comptabilité + carbone</p></div>
+          <div class="reason brand-top"><h3 data-field="s21_r5_title" contenteditable="false">🧠 Avantage Auto-Renforçant</h3><p data-field="s21_r5_desc" contenteditable="false">Chaque document traité améliore le système</p></div>
+          <div class="reason accent-gold-top"><h3 data-field="s21_r6_title" contenteditable="false">🌍 Timing Maroc</h3><p data-field="s21_r6_desc" contenteditable="false">Maroc Digital 2030 + Coupe du Monde Maroc 2030</p></div>
         </div>
-        <div class="metrics-bar accent-gold-bg" data-field="s21_bottom">Les forces convergent MAINTENANT — le timing est parfait pour CloudCFO</div>
+        <div class="metrics-bar accent-gold-bg" data-field="s21_bottom" contenteditable="false">Les forces convergent MAINTENANT — le timing est parfait pour CloudCFO</div>
       </div>
-      <div class="slide-footer">21/22</div>
+      <div class="slide-footer">22/23</div>
     </div>
-    <div class="slide dark-slide" data-slide="22">
+    <div class="slide dark-slide" data-slide="23" style="">
       <div class="slide-inner">
         <div class="accent-bar brand"></div>
         <div class="conclusion">
-          <h1 class="concl-title" data-field="s22_title">CloudCFO.ai</h1>
-          <p class="concl-quote" data-field="s22_quote">« Faire du Maroc le berceau de la première licorne mondiale de l'intelligence financière autonome »</p>
+          <h1 class="concl-title" data-field="s22_title" contenteditable="false">CloudCFO.ai</h1>
+          <p class="concl-quote" data-field="s22_quote" contenteditable="false">« Faire du Maroc le berceau de la première licorne mondiale de l'intelligence financière autonome »</p>
           <div class="concl-points">
-            <div class="concl-point"><span>✓</span><span data-field="s22_v1">Comptabilité 100% autonome pour chaque PME</span></div>
-            <div class="concl-point"><span>✓</span><span data-field="s22_v2">Carbon Passport accessible et automatisé</span></div>
-            <div class="concl-point"><span>✓</span><span data-field="s22_v3">Intelligence financière en temps réel</span></div>
-            <div class="concl-point"><span>✓</span><span data-field="s22_v4">Formation de la prochaine génération (Carbon Academy)</span></div>
-            <div class="concl-point"><span>✓</span><span data-field="s22_v5">Première licorne marocaine de l'intelligence financière</span></div>
+            <div class="concl-point"><span>✓</span><span data-field="s22_v1" contenteditable="false">Comptabilité 100% autonome pour chaque PME</span></div>
+            <div class="concl-point"><span>✓</span><span data-field="s22_v2" contenteditable="false">Carbon Passport accessible et automatisé</span></div>
+            <div class="concl-point"><span>✓</span><span data-field="s22_v3" contenteditable="false">Intelligence financière en temps réel</span></div>
+            <div class="concl-point"><span>✓</span><span data-field="s22_v4" contenteditable="false">Formation de la prochaine génération (Carbon Academy)</span></div>
+            <div class="concl-point"><span>✓</span><span data-field="s22_v5" contenteditable="false">Première licorne marocaine de l'intelligence financière</span></div>
           </div>
-          <div class="concl-cta" data-field="s22_cta">Rejoignez-nous pour construire l'avenir de l'intelligence financière</div>
-          <p class="concl-contact" data-field="s22_contact">Merlin Technologies (Maroc) SARL • cloudcfo.ai • merlindata.ai</p>
+          <div class="concl-cta" data-field="s22_cta" contenteditable="false">Rejoignez-nous pour construire l'avenir de l'intelligence financière</div>
+          <p class="concl-contact" data-field="s22_contact" contenteditable="false">Merlin Technologies (Maroc) SARL • cloudcfo.ai • merlindata.ai</p>
         </div>
       </div>
-      <div class="slide-footer dark">22/22</div>
+      <div class="slide-footer dark">23/23</div>
     </div>
 </div>
 
@@ -858,18 +1079,18 @@ h1,h2,h3,.font-heading{font-family:'Georgia',serif}
 
 <!-- NAVIGATION -->
 <div class="nav-controls">
-  <button id="prev-btn" class="nav-btn" onclick="prevSlide()" disabled>‹</button>
-  <div id="nav-dots" class="nav-dots"></div>
-  <span id="slide-counter" class="nav-counter">1 / 22</span>
+  <button id="prev-btn" class="nav-btn" onclick="prevSlide()">‹</button>
+  <div id="nav-dots" class="nav-dots"><div class="nav-dot"></div><div class="nav-dot"></div><div class="nav-dot"></div><div class="nav-dot"></div><div class="nav-dot"></div><div class="nav-dot"></div><div class="nav-dot"></div><div class="nav-dot"></div><div class="nav-dot"></div><div class="nav-dot"></div><div class="nav-dot"></div><div class="nav-dot"></div><div class="nav-dot active"></div><div class="nav-dot"></div><div class="nav-dot"></div><div class="nav-dot"></div><div class="nav-dot"></div><div class="nav-dot"></div><div class="nav-dot"></div><div class="nav-dot"></div><div class="nav-dot"></div><div class="nav-dot"></div></div>
+  <span id="slide-counter" class="nav-counter">13 / 22</span>
   <button id="next-btn" class="nav-btn" onclick="nextSlide()">›</button>
 </div>
 
 <!-- PASSWORD MODAL -->
 <div id="password-modal" class="modal hidden">
-  <div class="modal-content">
+  <div class="modal-content" data-protonpass-form="" style="">
     <h3>🔐 Accès Éditeur</h3>
     <p>Entrez le mot de passe pour modifier ce document :</p>
-    <input type="password" id="password-input" placeholder="Mot de passe">
+    <input type="password" id="password-input" placeholder="Mot de passe" style="">
     <div class="modal-buttons">
       <button onclick="verifyPassword()">Déverrouiller</button>
       <button onclick="closePasswordModal()">Annuler</button>
@@ -879,13 +1100,13 @@ h1,h2,h3,.font-heading{font-family:'Georgia',serif}
 </div>
 
 <!-- TOAST -->
-<div id="toast" class="toast"></div>
+<div id="toast" class="toast warning">⏰ Session expirée — retour en lecture</div>
 
 <script>
 const EDIT_PASSWORD = "KEF123$";
 const DEBOUNCE_DELAY = 500;
 const AUTO_LOCK_TIMEOUT = 30*60*1000;
-const TOTAL_SLIDES = 22;
+const TOTAL_SLIDES = 23;
 
 let currentSlide = 1;
 let isEditMode = false;
@@ -1206,5 +1427,5 @@ function restoreOriginal() {
 
 document.getElementById('password-input')?.addEventListener('keydown', e => { if (e.key === 'Enter') verifyPassword(); });
 </script>
-</body>
-</html>
+
+<protonpass-root-ad81 data-protonpass-role="root" data-protonpass-theme="os"></protonpass-root-ad81></body></html>
