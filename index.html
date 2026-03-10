@@ -6,8 +6,6 @@
 <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <style>
 :root {
   --brand-50:#F0FDF4;--brand-100:#DCFCE7;--brand-200:#BBF7D0;--brand-300:#86EFAC;
@@ -343,18 +341,6 @@ h1,h2,h3,.font-heading{font-family:'Georgia',serif}
 .error.hidden{display:none}
 
 @media(max-width:1024px){.slide{width:calc(100vw - 32px);max-width:none}.slide-inner{padding:24px 28px}.sec-grid{grid-template-columns:repeat(2,1fr)}.team-grid{grid-template-columns:repeat(2,1fr)}.reasons-grid{grid-template-columns:repeat(2,1fr)}}
-
-/* PDF Export Styles */
-#pdf-export-container .slide{position:relative!important;opacity:1!important;pointer-events:auto!important;transform:none!important;width:1280px!important;max-width:1280px!important;height:720px!important;border-radius:0!important;box-shadow:none!important;overflow:hidden!important}
-#pdf-export-container .slide-inner{height:720px!important;overflow:hidden!important;padding:36px 48px!important}
-#pdf-export-container .slide-footer{position:absolute;bottom:8px;left:0;right:0}
-#pdf-export-container .nav-controls,#pdf-export-container .toolbar{display:none!important}
-#pdf-export-container .grafana-panel{break-inside:avoid}
-#pdf-export-container .two-col{flex-wrap:nowrap!important}
-#pdf-export-container .cards-3,.cards-4{flex-wrap:nowrap!important}
-#pdf-export-container .big-metrics{flex-wrap:nowrap!important}
-#pdf-export-container table{table-layout:fixed!important;width:100%!important}
-@media print{.toolbar,.nav-controls,.modal,.toast{display:none!important}.slide{position:relative!important;opacity:1!important;width:100%!important;height:auto!important;page-break-after:always;break-after:page}}
 
 /* === POC SLIDES — GRAFANA-STYLE === */
 .grafana-panel{background:#181B1F;border:1px solid #2A2D33;border-radius:12px;padding:14px;color:white}
@@ -1040,11 +1026,11 @@ h1,h2,h3,.font-heading{font-family:'Georgia',serif}
             <div class="fund-self" data-field="s20_self" contenteditable="false">+ 20% autofinancement fondateur (couvert)</div>
           </div>
           <div class="fund-alloc">
-            <div class="alloc-item"><strong>Produit &amp; IA</strong><span class="alloc-amount">160K MAD</span><p data-field="s20_a1_desc" contenteditable="false">Process Autodiscovery - Ajout de nouvelles integration OAuth<br>Integration à des moteurs Compta supplémentaires<br>Upgrade Infra de la solution AI de Data Extraction, qualification<br>Développement de l'APP CloudCFO Mobile - avec la fonction Capture de Notifications<br>Upgrade vers des Dashboards personnalisables</p></div>
-            <div class="alloc-item"><strong>GTM</strong><span class="alloc-amount">120K MAD</span><p data-field="s20_a2_desc" contenteditable="false">Acquisition, <br>contenu, <br>Partenariats</p></div>
-            <div class="alloc-item"><strong>HITL</strong><span class="alloc-amount">40K MAD</span><p data-field="s20_a3_desc" contenteditable="false">Équipe validation et qualité</p></div>
-            <div class="alloc-item"><strong>Infrastructure</strong><span class="alloc-amount">40K MAD</span><p data-field="s20_a4_desc" contenteditable="false">Cloud, sécurité, monitoring</p></div>
-            <div class="alloc-item"><strong>PI &amp; Juridique</strong><span class="alloc-amount">40K MAD</span><p data-field="s20_a5_desc" contenteditable="false">Marques, brevets, conformité</p></div>
+            <div class="alloc-item"><strong data-field="s20_a1_title" contenteditable="false">Produit &amp; IA</strong><span class="alloc-amount" data-field="s20_a1_amount" contenteditable="false">160K MAD</span><p data-field="s20_a1_desc" contenteditable="false">Process Autodiscovery - Ajout de nouvelles integration OAuth<br>Integration à des moteurs Compta supplémentaires<br>Upgrade Infra de la solution AI de Data Extraction, qualification<br>Développement de l'APP CloudCFO Mobile - avec la fonction Capture de Notifications<br>Upgrade vers des Dashboards personnalisables</p></div>
+            <div class="alloc-item"><strong data-field="s20_a2_title" contenteditable="false">GTM</strong><span class="alloc-amount" data-field="s20_a2_amount" contenteditable="false">120K MAD</span><p data-field="s20_a2_desc" contenteditable="false">Acquisition, <br>contenu, <br>Partenariats</p></div>
+            <div class="alloc-item"><strong data-field="s20_a3_title" contenteditable="false">HITL</strong><span class="alloc-amount" data-field="s20_a3_amount" contenteditable="false">40K MAD</span><p data-field="s20_a3_desc" contenteditable="false">Équipe validation et qualité</p></div>
+            <div class="alloc-item"><strong data-field="s20_a4_title" contenteditable="false">Infrastructure</strong><span class="alloc-amount" data-field="s20_a4_amount" contenteditable="false">40K MAD</span><p data-field="s20_a4_desc" contenteditable="false">Cloud, sécurité, monitoring</p></div>
+            <div class="alloc-item"><strong data-field="s20_a5_title" contenteditable="false">PI &amp; Juridique</strong><span class="alloc-amount" data-field="s20_a5_amount" contenteditable="false">40K MAD</span><p data-field="s20_a5_desc" contenteditable="false">Marques, brevets, conformité</p></div>
           </div>
         </div>
         <div class="quote-bar" data-field="s20_warning" contenteditable="false">A aujourd'hui, l'investissement réalisé s'élève à 150.000 Dhs<br>Aucune levée de fonds externe n'a été sollicitée , à ce jour— 100% autofinancé par le fondateur&nbsp;</div>
@@ -1403,94 +1389,20 @@ function showToast(msg, type) {
 
 // ========== EXPORT ==========
 function downloadPDF() {
-  showToast('📥 Génération PDF en cours... (23 slides)', 'info');
+  showToast('📥 Génération PDF en cours...', 'info');
+  const slides = document.querySelectorAll('.slide');
   const current = currentSlide;
-  const allSlides = Array.from(document.querySelectorAll('.slide'));
-  const totalSlides = allSlides.length;
-  
-  // We'll render slide by slide using html2pdf's underlying html2canvas
-  const container = document.createElement('div');
-  container.id = 'pdf-export-container';
-  container.style.cssText = 'position:fixed;left:-9999px;top:0;width:1280px;z-index:-1;';
-  document.body.appendChild(container);
-  
-  // Prepare all slide clones in the container
-  const wrappers = [];
-  allSlides.forEach((slide) => {
-    const wrapper = document.createElement('div');
-    wrapper.style.cssText = 'width:1280px;height:720px;overflow:hidden;position:relative;margin-bottom:0;';
-    
-    const clone = slide.cloneNode(true);
-    clone.style.cssText = 'width:1280px;height:720px;position:relative;opacity:1;pointer-events:auto;transform:none;border-radius:0;box-shadow:none;overflow:hidden;max-width:none;display:block;';
-    clone.classList.add('active');
-    
-    const inner = clone.querySelector('.slide-inner');
-    if (inner) inner.style.cssText = 'padding:36px 48px;height:720px;overflow:hidden;position:relative;';
-    
-    // Remove contenteditable attributes for clean export
-    clone.querySelectorAll('[contenteditable]').forEach(el => el.removeAttribute('contenteditable'));
-    
-    wrapper.appendChild(clone);
-    container.appendChild(wrapper);
-    wrappers.push(wrapper);
+  slides.forEach(s => { s.style.position = 'relative'; s.style.opacity = '1'; s.style.pointerEvents = 'auto'; s.style.transform = 'none'; s.style.marginBottom = '20px'; });
+  const wrapper = document.createElement('div');
+  wrapper.style.width = '960px';
+  slides.forEach(s => wrapper.appendChild(s.cloneNode(true)));
+  document.body.appendChild(wrapper);
+  html2pdf().set({ margin: 0, filename: 'CloudCFO_PitchDeck_V4.pdf', image: { type: 'jpeg', quality: 0.95 }, html2canvas: { scale: 2, width: 960 }, jsPDF: { unit: 'px', format: [960, 540], orientation: 'landscape' }}).from(wrapper).save().then(() => {
+    document.body.removeChild(wrapper);
+    slides.forEach(s => { s.style.position = ''; s.style.opacity = ''; s.style.pointerEvents = ''; s.style.transform = ''; s.style.marginBottom = ''; });
+    showSlide(current);
+    showToast('✅ PDF téléchargé', 'success');
   });
-  
-  // Wait for render, then capture each slide as canvas → PDF page
-  setTimeout(async () => {
-    try {
-      // Access jsPDF from html2pdf bundle
-      const jsPDFClass = (window.jspdf && window.jspdf.jsPDF) || (window.jsPDF) || null;
-      
-      if (!jsPDFClass || typeof html2canvas === 'undefined') {
-        throw new Error('jsPDF or html2canvas not available — using fallback');
-      }
-      
-      const pdf = new jsPDFClass({ orientation: 'landscape', unit: 'px', format: [1280, 720], hotfixes: ['px_scaling'] });
-      
-      for (let i = 0; i < wrappers.length; i++) {
-        if (i > 0) pdf.addPage([1280, 720], 'landscape');
-        
-        const canvas = await html2canvas(wrappers[i], {
-          scale: 2,
-          width: 1280,
-          height: 720,
-          windowWidth: 1280,
-          useCORS: true,
-          logging: false,
-          backgroundColor: null
-        });
-        
-        const imgData = canvas.toDataURL('image/jpeg', 0.92);
-        pdf.addImage(imgData, 'JPEG', 0, 0, 1280, 720);
-        
-        // Update progress
-        if (i % 5 === 0) showToast(`📥 Slide ${i+1}/${totalSlides}...`, 'info');
-      }
-      
-      pdf.save('CloudCFO_PitchDeck.pdf');
-      document.body.removeChild(container);
-      showSlide(current);
-      showToast('✅ PDF téléchargé (' + totalSlides + ' slides)', 'success');
-    } catch(err) {
-      console.error('PDF generation error:', err);
-      // Fallback: use html2pdf bundled approach
-      try {
-        await html2pdf().set({
-          margin: 0,
-          filename: 'CloudCFO_PitchDeck.pdf',
-          image: { type: 'jpeg', quality: 0.90 },
-          html2canvas: { scale: 1.5, width: 1280, windowWidth: 1280, useCORS: true },
-          jsPDF: { unit: 'px', format: [1280, 720], orientation: 'landscape', hotfixes: ['px_scaling'] },
-          pagebreak: { mode: ['css'] }
-        }).from(container).save();
-        showToast('✅ PDF téléchargé (fallback)', 'success');
-      } catch(e2) {
-        showToast('❌ Erreur PDF — essayez Ctrl+P', 'error');
-      }
-      if (document.getElementById('pdf-export-container')) document.body.removeChild(container);
-      showSlide(current);
-    }
-  }, 800);
 }
 
 function downloadHTML() {
@@ -1498,7 +1410,7 @@ function downloadHTML() {
   const blob = new Blob([html], { type: 'text/html' });
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
-  a.download = 'CloudCFO_PitchDeck.html';
+  a.download = 'CloudCFO_PitchDeck_V4.html';
   a.click();
   showToast('✅ HTML téléchargé', 'success');
 }
