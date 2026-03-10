@@ -5,7 +5,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
 <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <style>
 :root {
   --brand-50:#F0FDF4;--brand-100:#DCFCE7;--brand-200:#BBF7D0;--brand-300:#86EFAC;
@@ -1388,21 +1389,113 @@ function showToast(msg, type) {
 }
 
 // ========== EXPORT ==========
-function downloadPDF() {
-  showToast('📥 Génération PDF en cours...', 'info');
-  const slides = document.querySelectorAll('.slide');
-  const current = currentSlide;
-  slides.forEach(s => { s.style.position = 'relative'; s.style.opacity = '1'; s.style.pointerEvents = 'auto'; s.style.transform = 'none'; s.style.marginBottom = '20px'; });
-  const wrapper = document.createElement('div');
-  wrapper.style.width = '960px';
-  slides.forEach(s => wrapper.appendChild(s.cloneNode(true)));
-  document.body.appendChild(wrapper);
-  html2pdf().set({ margin: 0, filename: 'CloudCFO_PitchDeck_V4.pdf', image: { type: 'jpeg', quality: 0.95 }, html2canvas: { scale: 2, width: 960 }, jsPDF: { unit: 'px', format: [960, 540], orientation: 'landscape' }}).from(wrapper).save().then(() => {
-    document.body.removeChild(wrapper);
-    slides.forEach(s => { s.style.position = ''; s.style.opacity = ''; s.style.pointerEvents = ''; s.style.transform = ''; s.style.marginBottom = ''; });
-    showSlide(current);
-    showToast('✅ PDF téléchargé', 'success');
+async function downloadPDF() {
+  const SLIDE_W = 1280;
+  const SLIDE_H = 720;
+  const totalSlides = document.querySelectorAll('[data-slide]').length;
+  const savedSlide = currentSlide;
+
+  showToast('📥 Génération PDF… slide 1/' + totalSlides, 'info');
+
+  // Access jsPDF from the UMD bundle (window.jspdf.jsPDF)
+  const { jsPDF } = window.jspdf || {};
+  if (!jsPDF) {
+    showToast('⏳ Chargement des bibliothèques…', 'info');
+    await new Promise(r => setTimeout(r, 500));
+  }
+
+  const pdf = new window.jspdf.jsPDF({
+    orientation: 'landscape',
+    unit: 'px',
+    format: [SLIDE_W, SLIDE_H],
+    hotfixes: ['px_scaling']
   });
+
+  const slidesWrapper = document.querySelector('.slides-wrapper');
+  const toolbar = document.querySelector('.toolbar');
+  const navBar = document.querySelector('.nav-bar');
+
+  // Temporarily make wrapper static for capture
+  const origWrapperStyle = slidesWrapper.getAttribute('style') || '';
+  if (toolbar) toolbar.style.display = 'none';
+  if (navBar) navBar.style.display = 'none';
+
+  for (let i = 1; i <= totalSlides; i++) {
+    // Show this slide
+    showSlide(i);
+    await new Promise(r => setTimeout(r, 120));
+
+    const slideEl = document.querySelector(`[data-slide="${i}"]`);
+    if (!slideEl) continue;
+
+    // Temporarily make the slide fill a fixed box for capture
+    const origPos   = slideEl.style.position;
+    const origOp    = slideEl.style.opacity;
+    const origTr    = slideEl.style.transform;
+    const origW     = slideEl.style.width;
+    const origH     = slideEl.style.height;
+    const origLeft  = slideEl.style.left;
+    const origTop   = slideEl.style.top;
+
+    Object.assign(slideEl.style, {
+      position:  'fixed',
+      top:       '0',
+      left:      '0',
+      width:     SLIDE_W + 'px',
+      height:    SLIDE_H + 'px',
+      opacity:   '1',
+      transform: 'none',
+      zIndex:    '9999',
+      overflow:  'hidden',
+      borderRadius: '0'
+    });
+
+    await new Promise(r => setTimeout(r, 80));
+
+    const canvas = await html2canvas(slideEl, {
+      scale: 1,
+      useCORS: true,
+      allowTaint: true,
+      backgroundColor: null,
+      width:  SLIDE_W,
+      height: SLIDE_H,
+      windowWidth:  SLIDE_W,
+      windowHeight: SLIDE_H,
+      x: 0,
+      y: 0,
+      scrollX: 0,
+      scrollY: 0
+    });
+
+    // Restore slide styles
+    Object.assign(slideEl.style, {
+      position:  origPos,
+      top:       origTop,
+      left:      origLeft,
+      width:     origW,
+      height:    origH,
+      opacity:   origOp,
+      transform: origTr,
+      zIndex:    '',
+      overflow:  '',
+      borderRadius: ''
+    });
+
+    const imgData = canvas.toDataURL('image/jpeg', 0.93);
+
+    if (i > 1) pdf.addPage([SLIDE_W, SLIDE_H], 'landscape');
+    pdf.addImage(imgData, 'JPEG', 0, 0, SLIDE_W, SLIDE_H);
+
+    showToast(`📥 Génération PDF… slide ${i}/${totalSlides}`, 'info');
+  }
+
+  // Restore UI
+  if (toolbar) toolbar.style.display = '';
+  if (navBar)  navBar.style.display  = '';
+  showSlide(savedSlide);
+
+  pdf.save('CloudCFO_PitchDeck_V10.pdf');
+  showToast('✅ PDF téléchargé — ' + totalSlides + ' slides', 'success');
 }
 
 function downloadHTML() {
